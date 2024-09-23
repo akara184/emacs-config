@@ -1,0 +1,33 @@
+
+;; ----- smex-history -----
+(
+ prog-mode
+ dashboard-mode
+ customize-group
+ nerd-icons-install-fonts
+ mc/mark-next-like-this-word
+ app-launcher-run-app
+ mc/mark-pop
+)
+
+;; ----- smex-data -----
+(
+ (smex . 2)
+ (package-install . 2)
+ (smex-where-is . 1)
+ (smex-save-to-file . 1)
+ (app-launcher-run-app . 3)
+ (delete-blank-lines . 1)
+ (grep . 2)
+ (occur . 1)
+ (mc/edit-lines . 2)
+ (mc/mark-pop . 2)
+ (multiple-cursors-mode . 1)
+ (mc/mark-all-like-this . 1)
+ (mc/keyboard-quit . 1)
+ (mc/mark-next-like-this-word . 1)
+ (nerd-icons-install-fonts . 1)
+ (customize-group . 1)
+ (dashboard-mode . 1)
+ (prog-mode . 1)
+)

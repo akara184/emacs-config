@@ -1,0 +1,2 @@
+;; Generated package description from bug-hunter.el  -*- no-byte-compile: t -*-
+(define-package "bug-hunter" "1.3.1.0.20201128.92354" "Hunt down errors by bisecting elisp files" '((seq "1.3") (cl-lib "0.5")) :commit "3eaaa92f981e034da6ea874420238a1b5058cce6" :authors '(("Artur Malabarba" . "emacs@endlessparentheses.com")) :maintainer '("Artur Malabarba" . "emacs@endlessparentheses.com") :keywords '("lisp") :url "https://github.com/Malabarba/elisp-bug-hunter")

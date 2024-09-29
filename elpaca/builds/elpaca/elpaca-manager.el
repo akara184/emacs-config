@@ -1,1 +1,0 @@
-/home/akara184/.emacs.d/elpaca/repos/elpaca/elpaca-manager.el

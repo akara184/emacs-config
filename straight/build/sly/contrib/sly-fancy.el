@@ -1,0 +1,1 @@
+/home/akara184/.emacs.d/straight/repos/sly/contrib/sly-fancy.el

@@ -1,7 +1,34 @@
-;; -*- coding: utf-8; lexical-binding: t; -*-
-;; Emacs init file configurations
+;;===============================================================
+;; Disabling package.el
+(setq package-enable-at-startup nil)
+;;===============================================================
+;; Package Configuration
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name
+        "straight/repos/straight.el/bootstrap.el"
+        (or (bound-and-true-p straight-base-dir)
+            user-emacs-directory)))
+      (bootstrap-version 7))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies)
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+(straight-use-package 'use-package) ;; Straight + Use-pacakge
+
+(setq straight-use-package-by-default t) ;; Make sure it all t
+
+;; Automatically debug and bisect your init (.emacs) file!
+(use-package bug-hunter)
 
 ;;===============================================================
+;; Emacs init file configurations
+
 ;; Helper function to open the init file
 (defun my-open-init-file ()
   "Open init file."
@@ -23,28 +50,42 @@
 (column-number-mode t)                      ;; Show column numbers
 (setq visible-bell nil)                     ;; Disable visual bell
 (recentf-mode 1)                            ;; Enable recent files
+(setq make-backup-files nil)                ;; dont make backup file
 
 ;; Show line numbers except in org-mode
 (global-display-line-numbers-mode t)
 (dolist (mode '(org-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
-;; Dashboard configuration
+;; Load theme and icons
+(use-package all-the-icons)             ;; Load icons
+(use-package nerd-icons)                ;; Load icons
+(use-package adwaita-dark-theme)        ;; adwaita theme
+(load-theme 'adwaita-dark t)            ;; Load theme
+
+(add-to-list 'default-frame-alist '(alpha-background . 99)) ;; For all frame Transparency
+
+;;Dashboard configuration
 (use-package dashboard
-  :ensure t
+  :init
+  (setq dashboard-items '((recents . 5)
+			  (projects . 10))
+	dashboard-startup-banner 'logo
+	dashboard-set-file-icons t
+	dashboard-icon-type 'nerd-icons
+	dashboard-heading-icons t
+	dashboard-projects-backend 'projectile)
   :config
   (dashboard-setup-startup-hook)
-  (setq dashboard-startup-banner "/home/akara184/Pictures/vasco1.png"))
+  (setq dashboard-startup-banner "~/.emacs.d/images/vasco1.png"))
 
-;; Load theme and icons
-(load-theme 'doom-ayu-dark t)               ;; Load theme
-(use-package all-the-icons)                 ;; Load icons
-(use-package doom-modeline                  ;; Load doom modeline
-  :ensure t
-  :init (doom-modeline-mode 1))
+;; Mood-line for better modeline
+(use-package  mood-line
+  :config (mood-line-mode)
+  :custom (mood-line-glyph-alist mood-line-glyphs-fira-code))
 
 ;; Set default font
-(set-face-attribute 'default nil :font "JetBrainsMono" :height 140)
+(set-face-attribute 'default nil :font "JetBrainsMono" :height 130)
 
 ;; Start Emacs in fullscreen mode
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -67,67 +108,28 @@
       (set-mark (line-beginning-position)))))
 
 ;; Unbind and rebind keys
-(global-unset-key (kbd "C-q"))              ;; Unbind C-q
-(global-set-key (kbd "C-q C-r") 'restart-emacs)
-(global-set-key (kbd "C-x e") 'eval-buffer)
-(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
-(global-set-key (kbd "C-z") 'undo)          ;; Standard undo
-(global-set-key (kbd "C-Z") 'undo-redo)     ;; Redo
-(global-set-key (kbd "C-<tab>") 'other-window)
-(global-set-key (kbd "C-;") 'comment-line)
-(global-set-key (kbd "C-c C-v") 'duplicate-line)
-(global-set-key (kbd "C-l") 'select-line)
+(global-unset-key (kbd "C-q"))                                        ;; Unbind C-q
+(global-set-key (kbd "C-q C-r") 'restart-emacs)                       ;; Restart emacs
+(global-set-key (kbd "C-x e") 'eval-buffer)                           ;; Eval buffer
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)               ;; Esc for quit
+(global-set-key (kbd "C-z") 'undo)                                    ;; Standard Undo
+(global-set-key (kbd "C-Z") 'undo-redo)                               ;; Undo
+(global-set-key (kbd "C-<tab>") 'other-window)                        ;; Switch other window
+(global-set-key (kbd "C-;") 'comment-line)                            ;; Comment line
+(global-set-key (kbd "C-c C-v") 'duplicate-line)                      ;; Duplicate line
+(global-set-key (kbd "C-l") 'select-line)                             ;; Select line
+(global-set-key (kbd "M-n n") 'centaur-tabs--create-new-empty-buffer) ;; Create new empty buffer
+(global-set-key (kbd "C-x K") 'kill-this-buffer) ;; Create new empty buffer
 
-(fset 'yes-or-no-p 'y-or-n-p)               ;; Simplify prompts to y/n
-
-;;===============================================================
-;; Package Configuration
-
-(require 'package)                          ;; Initialize package manager
-
-(setq package-archives '(("melpa" . "https://melpa.org/packages/")
-                         ("gnu-devel" . "https://elpa.gnu.org/devel/")
-                         ("org" . "https://orgmode.org/elpa/")))
-(package-initialize)
-
-(unless package-archive-contents
-  (package-refresh-contents))
-
-;; Initialize use-package
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-(setq use-package-always-ensure t)
-
-;; Stop Emacs from cluttering init file with custom-set variables
-(setq custom-file (concat user-emacs-directory "custom.el"))
-(when (file-exists-p custom-file)
-  (load custom-file))
-
-;; package manager for the Emacs hacker. straight.el
-(defvar bootstrap-version)
-(let ((bootstrap-file
-       (expand-file-name
-        "straight/repos/straight.el/bootstrap.el"
-        (or (bound-and-true-p straight-base-dir)
-            user-emacs-directory)))
-      (bootstrap-version 7))
-  (unless (file-exists-p bootstrap-file)
-    (with-current-buffer
-        (url-retrieve-synchronously
-         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
-         'silent 'inhibit-cookies)
-      (goto-char (point-max))
-      (eval-print-last-sexp)))
-  (load bootstrap-file nil 'nomessage))
-
+(fset 'yes-or-no-p 'y-or-n-p)                                         ;; Simplify prompts to y/n
 
 ;;===============================================================
 ;; Error Checking and Auto-complete
 
 ;; Flycheck for syntax checking
 (use-package flycheck
-  :init (global-flycheck-mode)
+  :init  (global-flycheck-mode)
+  :custom
   (setq flycheck-standard-error-navigation t))
 
 (use-package flycheck-inline
@@ -146,15 +148,13 @@
   (global-company-mode 1))
 
 (use-package yasnippet)                     ;; Enable yasnippet for snippets
-
 ;;===============================================================
 ;; Development Tools
 
 ;; LSP for multiple languages
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
-  :init (setq lsp-keymap-prefix "C-c l")
-  :config (lsp-enable-which-key-integration t))
+  :init (setq lsp-keymap-prefix "C-c l"))
 
 ;; SLY for Common Lisp
 (use-package sly)
@@ -162,6 +162,7 @@
 ;; LSP for Java
 (use-package lsp-java
   :config (add-hook 'java-mode-hook 'lsp))
+
 
 ;; TypeScript support with LSP
 (use-package typescript-mode
@@ -177,9 +178,6 @@
 (use-package lsp-ivy)
 (use-package lsp-treemacs)
 
-(require 'lsp-diagnostics)
-(lsp-diagnostics-flycheck-enable)
-
 ;; Keybinding helper
 (use-package which-key
   :init (which-key-mode)
@@ -189,24 +187,26 @@
 ;;===============================================================
 ;; Additional Tools
 
+;; Magit for GIT
+(use-package magit)
+
 ;; Multiple cursor
 (use-package multiple-cursors
-  :ensure t
-  :bind (("C-M-j"   . mc/mark-all-dwim)    
-         ("C-M-c"   . mc/edit-lines)                 
-         ("C-M-l"   . er/expand-region)   
-         ("C-M-/"   . mc/mark-all-like-this)         
-         ("C-M-."   . mc/mark-next-like-this)    
+  :bind (("C-M-j"   . mc/mark-all-dwim)
+         ("C-M-c"   . mc/edit-lines)
+         ("C-M-l"   . er/expand-region)
+         ("C-M-/"   . mc/mark-all-like-this)
+         ("C-M-."   . mc/mark-next-like-this)
          ("C-M-,"   . mc/mark-previous-like-this)
 	 ("C-M-<"   . mc/skip-to-previous-like-this)
-	 ("C-M->"   . mc/skip-to-next-like-this)))        
+	 ("C-M->"   . mc/skip-to-next-like-this)))
 
 ;; To read PDF
 (use-package pdf-tools)
 
 ;; To open apps in emacs
-(use-package app-launcher
-  :straight '(app-launcher :host github :repo "SebastienWae/app-launcher"))
+;; (use-package app-launcher
+;;   :straight '(app-launcher :host github :repo "SebastienWae/app-launcher"))
 
 ;; Rainbow parentheses
 (use-package rainbow-delimiters
@@ -219,7 +219,8 @@
 (use-package neotree
   :config
   (setq neo-theme (if (display-graphic-p) 'icons 'arrow)
-        neo-autorefresh t)
+        neo-autorefresh t
+	neo-show-hidden-files t)
   :bind ("C-\\". 'neotree-toggle))
 
 ;; Enhanced help UI
@@ -237,7 +238,6 @@
 ;; Ivy for better minibuffer completion
 ;; Ivy configuration
 (use-package ivy
-  :ensure t
   :diminish
   :init
   (ivy-mode 1)
@@ -253,7 +253,6 @@
 
 ;; Counsel configuration
 (use-package counsel
-  :ensure t
   :after ivy
   :bind
   (("M-x" . counsel-M-x)  ;; Enhanced M-x with counsel
@@ -268,7 +267,8 @@
    ("C-c j" . counsel-git-grep)  ;; Git grep integration
    ("C-c k" . counsel-ag)  ;; Ag (Silver Searcher) integration
    ("C-x l" . counsel-locate)  ;; Locate files
-   ("C-S-o" . counsel-rhythmbox)))  ;; Rhythmbox control
+   ("C-S-o" . counsel-rhythmbox) ;; Rhythmbox control
+   ("C-x C-r" . counsel-recentf)))  ;; Find recents files
 
 ;; Enhance M-x with Counsel
 (use-package smex)
@@ -281,9 +281,44 @@
   :after ivy
   :init (ivy-rich-mode 1))
 
+
+;; Use this to preview in dired
+(use-package peep-dired
+  :after dired
+  :config (setq peep-dired-cleanup-on-disable t))
+
+;;IDK
+(use-package ivy-xref
+  :init
+  ;; xref initialization is different in Emacs 27 - there are two different
+  ;; variables which can be set rather than just one
+  (when (>= emacs-major-version 27)
+    (setq xref-show-definitions-function #'ivy-xref-show-defs))
+  ;; Necessary in Emacs <27. In Emacs 27 it will affect all xref-based
+  ;; commands other than xref-find-definitions (e.g. project-find-regexp)
+  ;; as well
+  (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
+
+;; Tabs in emacs 
+(use-package centaur-tabs
+  :config
+  (setq centaur-tabs-style "bar"
+	centaur-tabs-set-bar 'over
+	centaur-tabs-set-modified-marker t
+	centaur-tabs-modified-marker "*"
+	centaur-tabs-set-icons t
+	centaur-tabs-plain-icons t
+	centaur-tabs-icon-type 'nerd-icons)
+  (centaur-tabs-mode t)
+  (centaur-tabs-headline-match)
+  :bind
+  ("C-x <prior>" . centaur-tabs-backward)
+  ("C-x <next>" . centaur-tabs-forward)
+  :hook
+  (dashboard-mode . centaur-tabs-local-mode))
+
 ;;===============================================================
 ;; Org Mode and Enhancements
-
 (use-package org)
 
 ;; Pretty org mode with org-superstar

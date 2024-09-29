@@ -1,1 +1,0 @@
-/home/akara184/.emacs.d/straight/repos/app-launcher/app-launcher.el

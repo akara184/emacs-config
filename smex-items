@@ -1,22 +1,22 @@
 
 ;; ----- smex-history -----
 (
- prog-mode
- dashboard-mode
- customize-group
+ quit-window
+ straight-pull-all
+ bug-reference-mode
  nerd-icons-install-fonts
- mc/mark-next-like-this-word
- app-launcher-run-app
- mc/mark-pop
+ all-the-icons-install-fonts
+ peep-dired
+ package-install
 )
 
 ;; ----- smex-data -----
 (
  (smex . 2)
- (package-install . 2)
+ (package-install . 11)
  (smex-where-is . 1)
  (smex-save-to-file . 1)
- (app-launcher-run-app . 3)
+ (app-launcher-run-app . 5)
  (delete-blank-lines . 1)
  (grep . 2)
  (occur . 1)
@@ -26,8 +26,59 @@
  (mc/mark-all-like-this . 1)
  (mc/keyboard-quit . 1)
  (mc/mark-next-like-this-word . 1)
- (nerd-icons-install-fonts . 1)
- (customize-group . 1)
- (dashboard-mode . 1)
+ (nerd-icons-install-fonts . 4)
+ (customize-group . 5)
+ (dashboard-mode . 2)
  (prog-mode . 1)
+ (dashboard-open . 2)
+ (counsel-recentf . 2)
+ (minions-mode . 4)
+ (sly . 5)
+ (lsp-mode . 7)
+ (lsp-install-server . 2)
+ (lsp . 4)
+ (run-lisp . 1)
+ (mood-line-mode . 2)
+ (load-theme . 5)
+ (minimize-window . 1)
+ (minibuffer-complete . 1)
+ (minibuffer-choose-completion . 1)
+ (dired . 10)
+ (peep-dired . 13)
+ (dumb-jump-go . 4)
+ (dumb-jump-quick-look . 2)
+ (xref-show-location-at-point . 2)
+ (dumb-jump-mode . 2)
+ (dumb-jump-go-prompt . 1)
+ (goto-address-mode . 2)
+ (xref-goto-xref . 1)
+ (xref-find-definitions . 1)
+ (all-the-icons-install-fonts . 4)
+ (centaur-tabs-mode . 3)
+ (centaur-tabs-backward . 1)
+ (centaur-tabs-forward . 1)
+ (tab-new . 1)
+ (tab-new-to . 1)
+ (centaur-tabs--create-new-tab . 1)
+ (centaur-tabs-new-tab--button . 1)
+ (centaur-tabs--create-new-empty-buffer . 1)
+ (centaur-tabs-extract-window-to-new-frame . 1)
+ (kill-this-buffer . 2)
+ (magit . 1)
+ (toc-org-mode . 1)
+ (toc-org-insert-toc . 1)
+ (straight-use-package . 5)
+ (straight-remove-unused-repos . 3)
+ (ace-window . 1)
+ (straight-pull-all . 5)
+ (magit-commit . 1)
+ (straight-pull-package-and-deps . 1)
+ (theme-choose-variant . 1)
+ (bug-reference-mode . 1)
+ (bug-hunter-init-file . 1)
+ (elpaca-update . 2)
+ (elpaca-update-all . 2)
+ (elpaca-rebuild . 1)
+ (elpaca-pull . 1)
+ (quit-window . 1)
 )

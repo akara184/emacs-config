@@ -3,7 +3,7 @@
 
 "29.4"
 
-#s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("straight" ("2024-09-29 13:49:57" ("emacs") (:type git :host github :repo "radian-software/straight.el" :files ("straight*.el") :branch "master" :package "straight" :local-repo "straight.el")) "org-elpa" ("2024-09-29 13:49:56" nil (:local-repo nil :package "org-elpa" :type git)) "melpa" ("2024-09-29 13:49:57" nil (:type git :host github :repo "melpa/melpa" :build nil :package "melpa" :local-repo "melpa")) "gnu-elpa-mirror" ("2024-09-29 13:49:57" nil (:type git :host github :repo "emacs-straight/gnu-elpa-mirror" :build nil :package "gnu-elpa-mirror" :local-repo "gnu-elpa-mirror")) "nongnu-elpa" ("2024-09-29 13:49:57" nil (:type git :repo "https://git.savannah.gnu.org/git/emacs/nongnu.git" :depth (full single-branch) :local-repo "nongnu-elpa" :build nil :package "nongnu-elpa")) "el-get" ("2024-09-29 13:49:57" nil (:type git :host github :repo "dimitri/el-get" :build nil :files (:defaults "methods" ("recipes" "recipes/el-get.rcp") "el-get-pkg.el") :flavor melpa :package "el-get" :local-repo "el-get")) "emacsmirror-mirror" ("2024-09-29 13:49:57" nil (:type git :host github :repo "emacs-straight/emacsmirror-mirror" :build nil :package "emacsmirror-mirror" :local-repo "emacsmirror-mirror")) "use-package" ("2024-09-29 13:49:57" ("emacs" "bind-key") (:type git :flavor melpa :files (:defaults (:exclude "bind-key.el" "bind-chord.el" "use-package-chords.el" "use-package-ensure-system-package.el") "use-package-pkg.el") :host github :repo "jwiegley/use-package" :package "use-package" :local-repo "use-package")) "bind-key" ("2024-09-29 13:49:57" ("emacs") (:flavor melpa :files ("bind-key.el" "bind-key-pkg.el") :package "bind-key" :local-repo "use-package" :type git :repo "jwiegley/use-package" :host github)) "bug-hunter" ("2024-09-29 13:49:57" ("seq" "cl-lib") (:type git :host github :repo "emacs-straight/bug-hunter" :files ("*" (:exclude ".git")) :package "bug-hunter" :local-repo "bug-hunter")) "seq" ("2024-09-29 13:49:57" nil (:type git :host github :repo "emacs-straight/seq" :files ("*" (:exclude ".git")) :package "seq" :local-repo "seq")) "all-the-icons" ("2024-09-29 13:49:57" ("emacs") (:type git :flavor melpa :files (:defaults "data" "all-the-icons-pkg.el") :host github :repo "domtronn/all-the-icons.el" :package "all-the-icons" :local-repo "all-the-icons.el")) "nerd-icons" ("2024-09-29 13:49:57" ("emacs") (:type git :flavor melpa :files (:defaults "data" "nerd-icons-pkg.el") :host github :repo "rainstormstudio/nerd-icons.el" :package "nerd-icons" :local-repo "nerd-icons.el")) "adwaita-dark-theme" ("2024-09-29 13:49:57" ("emacs") (:type git :flavor melpa :host gitlab :repo "jessieh/adwaita-dark-theme" :package "adwaita-dark-theme" :local-repo "adwaita-dark-theme")) "dashboard" ("2024-09-29 13:49:57" ("emacs") (:type git :flavor melpa :files (:defaults "banners" "dashboard-pkg.el") :host github :repo "emacs-dashboard/emacs-dashboard" :package "dashboard" :local-repo "emacs-dashboard")) "mood-line" ("2024-09-29 13:49:57" ("emacs") (:type git :flavor melpa :host gitlab :repo "jessieh/mood-line" :package "mood-line" :local-repo "mood-line")) "hydra" ("2024-09-29 13:49:57" ("cl-lib" "lv") (:type git :flavor melpa :files (:defaults (:exclude "lv.el") "hydra-pkg.el") :host github :repo "abo-abo/hydra" :package "hydra" :local-repo "hydra")) "lv" ("2024-09-29 13:49:57" nil (:flavor melpa :files ("lv.el" "lv-pkg.el") :package "lv" :local-repo "hydra" :type git :repo "abo-abo/hydra" :host github)) "flycheck" ("2024-09-29 13:49:57" ("emacs") (:type git :flavor melpa :host github :repo "flycheck/flycheck" :package "flycheck" :local-repo "flycheck")) "flycheck-inline" ("2024-09-29 13:49:57" ("emacs" "flycheck") (:type git :flavor melpa :host github :repo "flycheck/flycheck-inline" :package "flycheck-inline" :local-repo "flycheck-inline")) "company" ("2024-09-29 13:49:57" ("emacs") (:type git :flavor melpa :files (:defaults "icons" ("images/small" "doc/images/small/*.png") "company-pkg.el") :host github :repo "company-mode/company-mode" :package "company" :local-repo "company-mode")) "yasnippet" ("2024-09-29 13:49:57" ("cl-lib" "emacs") (:type git :flavor melpa :files ("yasnippet.el" "snippets" "yasnippet-pkg.el") :host github :repo "joaotavora/yasnippet" :package "yasnippet" :local-repo "yasnippet")) "lsp-mode" ("2024-09-29 13:49:57" ("emacs" "dash" "f" "ht" "spinner" "markdown-mode" "lv" "eldoc") (:type git :flavor melpa :files (:defaults "clients/*.el" "lsp-mode-pkg.el") :host github :repo "emacs-lsp/lsp-mode" :package "lsp-mode" :local-repo "lsp-mode")) "dash" ("2024-09-29 13:49:57" ("emacs") (:type git :flavor melpa :files ("dash.el" "dash.texi" "dash-pkg.el") :host github :repo "magnars/dash.el" :package "dash" :local-repo "dash.el")) "f" ("2024-09-29 13:49:57" ("emacs" "s" "dash") (:type git :flavor melpa :host github :repo "rejeep/f.el" :package "f" :local-repo "f.el")) "s" ("2024-09-29 13:49:57" nil (:type git :flavor melpa :host github :repo "magnars/s.el" :package "s" :local-repo "s.el")) "ht" ("2024-09-29 13:49:57" ("dash") (:type git :flavor melpa :host github :repo "Wilfred/ht.el" :package "ht" :local-repo "ht.el")) "spinner" ("2024-09-29 13:49:57" ("emacs") (:type git :host github :repo "emacs-straight/spinner" :files ("*" (:exclude ".git")) :package "spinner" :local-repo "spinner")) "markdown-mode" ("2024-09-29 13:49:57" ("emacs") (:type git :flavor melpa :host github :repo "jrblevin/markdown-mode" :package "markdown-mode" :local-repo "markdown-mode")) "eldoc" ("2024-09-29 13:49:57" ("emacs") (:type git :host github :repo "emacs-straight/eldoc" :files ("*" (:exclude ".git")) :package "eldoc" :local-repo "eldoc")) "sly" ("2024-09-29 13:49:57" ("emacs") (:type git :flavor melpa :files (:defaults "lib" "slynk" "contrib" "doc/images" (:exclude "sly-autoloads.el") "sly-pkg.el") :host github :repo "joaotavora/sly" :package "sly" :local-repo "sly")) "lsp-java" ("2024-09-29 13:49:58" ("emacs" "lsp-mode" "markdown-mode" "dash" "f" "ht" "request" "treemacs" "dap-mode") (:type git :flavor melpa :files (:defaults "icons" "lsp-java-pkg.el") :host github :repo "emacs-lsp/lsp-java" :package "lsp-java" :local-repo "lsp-java")) "request" ("2024-09-29 13:49:58" ("emacs") (:type git :flavor melpa :files ("request.el" "request-pkg.el") :host github :repo "tkf/emacs-request" :package "request" :local-repo "emacs-request")) "treemacs" ("2024-09-29 13:49:58" ("emacs" "cl-lib" "dash" "s" "ace-window" "pfuture" "hydra" "ht" "cfrs") (:type git :flavor melpa :files (:defaults "Changelog.org" "icons" "src/elisp/treemacs*.el" "src/scripts/treemacs*.py" (:exclude "src/extra/*") "treemacs-pkg.el") :host github :repo "Alexander-Miller/treemacs" :package "treemacs" :local-repo "treemacs")) "ace-window" ("2024-09-29 13:49:58" ("avy") (:type git :flavor melpa :host github :repo "abo-abo/ace-window" :package "ace-window" :local-repo "ace-window")) "avy" ("2024-09-29 13:49:58" ("emacs" "cl-lib") (:type git :flavor melpa :host github :repo "abo-abo/avy" :package "avy" :local-repo "avy")) "pfuture" ("2024-09-29 13:49:58" ("emacs") (:type git :flavor melpa :host github :repo "Alexander-Miller/pfuture" :package "pfuture" :local-repo "pfuture")) "cfrs" ("2024-09-29 13:49:58" ("emacs" "dash" "s" "posframe") (:type git :flavor melpa :host github :repo "Alexander-Miller/cfrs" :package "cfrs" :local-repo "cfrs")) "posframe" ("2024-09-29 13:49:58" ("emacs") (:type git :flavor melpa :host github :repo "tumashu/posframe" :package "posframe" :local-repo "posframe")) "dap-mode" ("2024-09-29 13:49:58" ("emacs" "dash" "lsp-mode" "bui" "f" "s" "lsp-treemacs" "posframe" "ht" "lsp-docker") (:type git :flavor melpa :files (:defaults "icons" "dap-mode-pkg.el") :host github :repo "emacs-lsp/dap-mode" :package "dap-mode" :local-repo "dap-mode")) "bui" ("2024-09-29 13:49:58" ("emacs" "dash") (:type git :flavor melpa :host github :repo "alezost/bui.el" :package "bui" :local-repo "bui.el")) "lsp-treemacs" ("2024-09-29 13:49:58" ("emacs" "dash" "f" "ht" "treemacs" "lsp-mode") (:type git :flavor melpa :files (:defaults "icons" "lsp-treemacs-pkg.el") :host github :repo "emacs-lsp/lsp-treemacs" :package "lsp-treemacs" :local-repo "lsp-treemacs")) "lsp-docker" ("2024-09-29 13:49:58" ("emacs" "dash" "lsp-mode" "f" "s" "yaml" "ht") (:type git :flavor melpa :host github :repo "emacs-lsp/lsp-docker" :package "lsp-docker" :local-repo "lsp-docker")) "yaml" ("2024-09-29 13:49:58" ("emacs") (:type git :flavor melpa :host github :repo "zkry/yaml.el" :package "yaml" :local-repo "yaml.el")) "typescript-mode" ("2024-09-29 13:49:58" ("emacs") (:type git :flavor melpa :host github :repo "emacs-typescript/typescript.el" :package "typescript-mode" :local-repo "typescript.el")) "lsp-ui" ("2024-09-29 13:49:58" ("emacs" "dash" "lsp-mode" "markdown-mode") (:type git :flavor melpa :files (:defaults "lsp-ui-doc.html" "resources" "lsp-ui-pkg.el") :host github :repo "emacs-lsp/lsp-ui" :package "lsp-ui" :local-repo "lsp-ui")) "lsp-ivy" ("2024-09-29 13:49:58" ("emacs" "dash" "lsp-mode" "ivy") (:type git :flavor melpa :host github :repo "emacs-lsp/lsp-ivy" :package "lsp-ivy" :local-repo "lsp-ivy")) "ivy" ("2024-09-29 13:49:58" ("emacs") (:type git :flavor melpa :files (:defaults "doc/ivy-help.org" (:exclude "swiper.el" "counsel.el" "ivy-hydra.el" "ivy-avy.el") "ivy-pkg.el") :host github :repo "abo-abo/swiper" :package "ivy" :local-repo "swiper")) "which-key" ("2024-09-29 13:49:58" ("emacs") (:type git :flavor melpa :host github :repo "justbur/emacs-which-key" :package "which-key" :local-repo "emacs-which-key")) "magit" ("2024-09-29 13:49:58" ("emacs" "compat" "dash" "magit-section" "seq" "transient" "with-editor") (:type git :flavor melpa :files ("lisp/magit*.el" "lisp/git-*.el" "docs/magit.texi" "docs/AUTHORS.md" "LICENSE" "magit-pkg.el" (:exclude "lisp/magit-section.el") "magit-pkg.el") :host github :repo "magit/magit" :package "magit" :local-repo "magit")) "compat" ("2024-09-29 13:49:58" ("emacs" "seq") (:type git :host github :repo "emacs-straight/compat" :files ("*" (:exclude ".git")) :package "compat" :local-repo "compat")) "magit-section" ("2024-09-29 13:49:58" ("emacs" "compat" "dash" "seq") (:flavor melpa :files ("lisp/magit-section.el" "docs/magit-section.texi" "magit-section-pkg.el" "magit-section-pkg.el") :package "magit-section" :local-repo "magit" :type git :repo "magit/magit" :host github)) "transient" ("2024-09-29 13:49:58" ("emacs" "compat" "seq") (:type git :flavor melpa :host github :repo "magit/transient" :package "transient" :local-repo "transient")) "with-editor" ("2024-09-29 13:49:58" ("emacs" "compat") (:type git :flavor melpa :host github :repo "magit/with-editor" :package "with-editor" :local-repo "with-editor")) "multiple-cursors" ("2024-09-29 13:49:59" ("cl-lib") (:type git :flavor melpa :host github :repo "magnars/multiple-cursors.el" :package "multiple-cursors" :local-repo "multiple-cursors.el")) "pdf-tools" ("2024-09-29 13:49:59" ("emacs" "tablist" "let-alist") (:type git :flavor melpa :files (:defaults "README" ("build" "Makefile") ("build" "server") "pdf-tools-pkg.el") :host github :repo "vedang/pdf-tools" :package "pdf-tools" :local-repo "pdf-tools")) "tablist" ("2024-09-29 13:49:59" ("emacs") (:type git :flavor melpa :host github :repo "emacsorphanage/tablist" :package "tablist" :local-repo "tablist")) "let-alist" ("2024-09-29 13:49:59" ("emacs") (:type git :host github :repo "emacs-straight/let-alist" :files ("*" (:exclude ".git")) :package "let-alist" :local-repo "let-alist")) "rainbow-delimiters" ("2024-09-29 13:49:59" nil (:type git :flavor melpa :host github :repo "Fanael/rainbow-delimiters" :package "rainbow-delimiters" :local-repo "rainbow-delimiters")) "projectile" ("2024-09-29 13:49:59" ("emacs") (:type git :flavor melpa :host github :repo "bbatsov/projectile" :package "projectile" :local-repo "projectile")) "neotree" ("2024-09-29 13:49:59" ("cl-lib") (:type git :flavor melpa :files (:defaults "icons" "neotree-pkg.el") :host github :repo "jaypei/emacs-neotree" :package "neotree" :local-repo "emacs-neotree")) "helpful" ("2024-09-29 13:49:59" ("emacs" "dash" "s" "f" "elisp-refs") (:type git :flavor melpa :host github :repo "Wilfred/helpful" :package "helpful" :local-repo "helpful")) "elisp-refs" ("2024-09-29 13:49:59" ("dash" "s") (:type git :flavor melpa :files (:defaults (:exclude "elisp-refs-bench.el") "elisp-refs-pkg.el") :host github :repo "Wilfred/elisp-refs" :package "elisp-refs" :local-repo "elisp-refs")) "counsel" ("2024-09-29 13:49:59" ("emacs" "ivy" "swiper") (:flavor melpa :files ("counsel.el" "counsel-pkg.el") :package "counsel" :local-repo "swiper" :type git :repo "abo-abo/swiper" :host github)) "swiper" ("2024-09-29 13:49:59" ("emacs" "ivy") (:flavor melpa :files ("swiper.el" "swiper-pkg.el") :package "swiper" :local-repo "swiper" :type git :repo "abo-abo/swiper" :host github)) "smex" ("2024-09-29 13:49:59" ("emacs") (:type git :flavor melpa :host github :repo "nonsequitur/smex" :package "smex" :local-repo "smex")) "all-the-icons-ivy-rich" ("2024-09-29 13:49:59" ("emacs" "ivy-rich" "all-the-icons") (:type git :flavor melpa :host github :repo "seagle0128/all-the-icons-ivy-rich" :package "all-the-icons-ivy-rich" :local-repo "all-the-icons-ivy-rich")) "ivy-rich" ("2024-09-29 13:49:59" ("emacs" "ivy") (:type git :flavor melpa :host github :repo "Yevgnen/ivy-rich" :package "ivy-rich" :local-repo "ivy-rich")) "peep-dired" ("2024-09-29 13:49:59" nil (:type git :flavor melpa :host github :repo "asok/peep-dired" :package "peep-dired" :local-repo "peep-dired")) "ivy-xref" ("2024-09-29 13:49:59" ("emacs" "ivy") (:type git :flavor melpa :host github :repo "alexmurray/ivy-xref" :package "ivy-xref" :local-repo "ivy-xref")) "centaur-tabs" ("2024-09-29 13:49:59" ("emacs" "powerline") (:type git :flavor melpa :host github :repo "ema2159/centaur-tabs" :package "centaur-tabs" :local-repo "centaur-tabs")) "powerline" ("2024-09-29 13:49:59" ("cl-lib") (:type git :flavor melpa :host github :repo "milkypostman/powerline" :package "powerline" :local-repo "powerline")) "org" ("2024-09-29 13:49:59" ("emacs") (:type git :repo "https://git.savannah.gnu.org/git/emacs/org-mode.git" :local-repo "org" :depth full :pre-build (straight-recipes-org-elpa--build) :build (:not autoloads) :files (:defaults "lisp/*.el" ("etc/styles/" "etc/styles/*")) :package "org")) "org-superstar" ("2024-09-29 13:49:59" ("org" "emacs") (:type git :flavor melpa :host github :repo "integral-dw/org-superstar-mode" :package "org-superstar" :local-repo "org-superstar-mode")) "toc-org" ("2024-09-29 13:49:59" nil (:type git :flavor melpa :host github :repo "snosov1/toc-org" :package "toc-org" :local-repo "toc-org"))))
+#s(hash-table size 145 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("straight" ("2024-11-04 00:08:19" ("emacs") (:type git :host github :repo "radian-software/straight.el" :files ("straight*.el") :branch "master" :package "straight" :local-repo "straight.el")) "org-elpa" ("2024-11-04 00:08:19" nil (:local-repo nil :package "org-elpa" :type git)) "melpa" ("2024-11-04 00:08:19" nil (:type git :host github :repo "melpa/melpa" :build nil :package "melpa" :local-repo "melpa")) "gnu-elpa-mirror" ("2024-11-04 00:08:19" nil (:type git :host github :repo "emacs-straight/gnu-elpa-mirror" :build nil :package "gnu-elpa-mirror" :local-repo "gnu-elpa-mirror")) "nongnu-elpa" ("2024-11-04 00:08:19" nil (:type git :repo "https://git.savannah.gnu.org/git/emacs/nongnu.git" :depth (full single-branch) :local-repo "nongnu-elpa" :build nil :package "nongnu-elpa")) "el-get" ("2024-11-04 00:08:19" nil (:type git :host github :repo "dimitri/el-get" :build nil :files (:defaults "methods" ("recipes" "recipes/el-get.rcp") "el-get-pkg.el") :flavor melpa :package "el-get" :local-repo "el-get")) "emacsmirror-mirror" ("2024-11-04 00:08:19" nil (:type git :host github :repo "emacs-straight/emacsmirror-mirror" :build nil :package "emacsmirror-mirror" :local-repo "emacsmirror-mirror")) "use-package" ("2024-11-04 00:08:19" ("emacs" "bind-key") (:type git :flavor melpa :files (:defaults (:exclude "bind-key.el" "bind-chord.el" "use-package-chords.el" "use-package-ensure-system-package.el") "use-package-pkg.el") :host github :repo "jwiegley/use-package" :package "use-package" :local-repo "use-package")) "bind-key" ("2024-11-04 00:08:19" ("emacs") (:flavor melpa :files ("bind-key.el" "bind-key-pkg.el") :package "bind-key" :local-repo "use-package" :type git :repo "jwiegley/use-package" :host github)) "bug-hunter" ("2024-11-04 00:08:19" ("seq" "cl-lib") (:type git :host github :repo "emacs-straight/bug-hunter" :files ("*" (:exclude ".git")) :package "bug-hunter" :local-repo "bug-hunter")) "seq" ("2024-11-04 00:08:19" nil (:type git :host github :repo "emacs-straight/seq" :files ("*" (:exclude ".git")) :package "seq" :local-repo "seq")) "all-the-icons" ("2024-11-04 00:08:19" ("emacs") (:type git :flavor melpa :files (:defaults "data" "all-the-icons-pkg.el") :host github :repo "domtronn/all-the-icons.el" :package "all-the-icons" :local-repo "all-the-icons.el")) "nerd-icons" ("2024-11-04 00:08:19" ("emacs") (:type git :flavor melpa :files (:defaults "data" "nerd-icons-pkg.el") :host github :repo "rainstormstudio/nerd-icons.el" :package "nerd-icons" :local-repo "nerd-icons.el")) "adwaita-dark-theme" ("2024-11-04 00:08:19" ("emacs") (:type git :flavor melpa :host gitlab :repo "jessieh/adwaita-dark-theme" :package "adwaita-dark-theme" :local-repo "adwaita-dark-theme")) "dashboard" ("2024-11-04 00:08:19" ("emacs") (:type git :flavor melpa :files (:defaults "banners" "dashboard-pkg.el") :host github :repo "emacs-dashboard/emacs-dashboard" :package "dashboard" :local-repo "emacs-dashboard")) "mood-line" ("2024-11-04 00:08:19" ("emacs") (:type git :flavor melpa :host gitlab :repo "jessieh/mood-line" :package "mood-line" :local-repo "mood-line")) "hydra" ("2024-11-04 00:08:19" ("cl-lib" "lv") (:type git :flavor melpa :files (:defaults (:exclude "lv.el") "hydra-pkg.el") :host github :repo "abo-abo/hydra" :package "hydra" :local-repo "hydra")) "lv" ("2024-11-04 00:08:19" nil (:flavor melpa :files ("lv.el" "lv-pkg.el") :package "lv" :local-repo "hydra" :type git :repo "abo-abo/hydra" :host github)) "flycheck" ("2024-11-04 00:08:19" ("emacs") (:type git :flavor melpa :host github :repo "flycheck/flycheck" :package "flycheck" :local-repo "flycheck")) "flycheck-inline" ("2024-11-04 00:08:19" ("emacs" "flycheck") (:type git :flavor melpa :host github :repo "flycheck/flycheck-inline" :package "flycheck-inline" :local-repo "flycheck-inline")) "company" ("2024-11-04 00:08:19" ("emacs") (:type git :flavor melpa :files (:defaults "icons" ("images/small" "doc/images/small/*.png") "company-pkg.el") :host github :repo "company-mode/company-mode" :package "company" :local-repo "company-mode")) "yasnippet" ("2024-11-04 00:08:20" ("cl-lib" "emacs") (:type git :flavor melpa :files ("yasnippet.el" "snippets" "yasnippet-pkg.el") :host github :repo "joaotavora/yasnippet" :package "yasnippet" :local-repo "yasnippet")) "lsp-mode" ("2024-11-04 00:08:20" ("emacs" "dash" "f" "ht" "spinner" "markdown-mode" "lv" "eldoc") (:type git :flavor melpa :files (:defaults "clients/*.el" "lsp-mode-pkg.el") :host github :repo "emacs-lsp/lsp-mode" :package "lsp-mode" :local-repo "lsp-mode")) "dash" ("2024-11-04 00:08:20" ("emacs") (:type git :flavor melpa :files ("dash.el" "dash.texi" "dash-pkg.el") :host github :repo "magnars/dash.el" :package "dash" :local-repo "dash.el")) "f" ("2024-11-04 00:08:20" ("emacs" "s" "dash") (:type git :flavor melpa :host github :repo "rejeep/f.el" :package "f" :local-repo "f.el")) "s" ("2024-11-04 00:08:20" nil (:type git :flavor melpa :host github :repo "magnars/s.el" :package "s" :local-repo "s.el")) "ht" ("2024-11-04 00:08:20" ("dash") (:type git :flavor melpa :host github :repo "Wilfred/ht.el" :package "ht" :local-repo "ht.el")) "spinner" ("2024-11-04 00:08:20" ("emacs") (:type git :host github :repo "emacs-straight/spinner" :files ("*" (:exclude ".git")) :package "spinner" :local-repo "spinner")) "markdown-mode" ("2024-11-04 00:08:20" ("emacs") (:type git :flavor melpa :host github :repo "jrblevin/markdown-mode" :package "markdown-mode" :local-repo "markdown-mode")) "eldoc" ("2024-11-04 00:08:20" ("emacs") (:type git :host github :repo "emacs-straight/eldoc" :files ("*" (:exclude ".git")) :package "eldoc" :local-repo "eldoc")) "sly" ("2024-11-04 00:08:20" ("emacs") (:type git :flavor melpa :files (:defaults "lib" "slynk" "contrib" "doc/images" (:exclude "sly-autoloads.el") "sly-pkg.el") :host github :repo "joaotavora/sly" :package "sly" :local-repo "sly")) "lsp-java" ("2024-11-04 00:08:20" ("emacs" "lsp-mode" "markdown-mode" "dash" "f" "ht" "request" "treemacs" "dap-mode") (:type git :flavor melpa :files (:defaults "icons" "lsp-java-pkg.el") :host github :repo "emacs-lsp/lsp-java" :package "lsp-java" :local-repo "lsp-java")) "request" ("2024-11-04 00:08:20" ("emacs") (:type git :flavor melpa :files ("request.el" "request-pkg.el") :host github :repo "tkf/emacs-request" :package "request" :local-repo "emacs-request")) "treemacs" ("2024-11-04 00:08:20" ("emacs" "cl-lib" "dash" "s" "ace-window" "pfuture" "hydra" "ht" "cfrs") (:type git :flavor melpa :files (:defaults "Changelog.org" "icons" "src/elisp/treemacs*.el" "src/scripts/treemacs*.py" (:exclude "src/extra/*") "treemacs-pkg.el") :host github :repo "Alexander-Miller/treemacs" :package "treemacs" :local-repo "treemacs")) "ace-window" ("2024-11-04 00:08:20" ("avy") (:type git :flavor melpa :host github :repo "abo-abo/ace-window" :package "ace-window" :local-repo "ace-window")) "avy" ("2024-11-04 00:08:20" ("emacs" "cl-lib") (:type git :flavor melpa :host github :repo "abo-abo/avy" :package "avy" :local-repo "avy")) "pfuture" ("2024-11-04 00:08:20" ("emacs") (:type git :flavor melpa :host github :repo "Alexander-Miller/pfuture" :package "pfuture" :local-repo "pfuture")) "cfrs" ("2024-11-04 00:08:20" ("emacs" "dash" "s" "posframe") (:type git :flavor melpa :host github :repo "Alexander-Miller/cfrs" :package "cfrs" :local-repo "cfrs")) "posframe" ("2024-11-04 00:08:20" ("emacs") (:type git :flavor melpa :host github :repo "tumashu/posframe" :package "posframe" :local-repo "posframe")) "dap-mode" ("2024-11-04 00:08:20" ("emacs" "dash" "lsp-mode" "bui" "f" "s" "lsp-treemacs" "posframe" "ht" "lsp-docker") (:type git :flavor melpa :files (:defaults "icons" "dap-mode-pkg.el") :host github :repo "emacs-lsp/dap-mode" :package "dap-mode" :local-repo "dap-mode")) "bui" ("2024-11-04 00:08:20" ("emacs" "dash") (:type git :flavor melpa :host github :repo "alezost/bui.el" :package "bui" :local-repo "bui.el")) "lsp-treemacs" ("2024-11-04 00:08:20" ("emacs" "dash" "f" "ht" "treemacs" "lsp-mode") (:type git :flavor melpa :files (:defaults "icons" "lsp-treemacs-pkg.el") :host github :repo "emacs-lsp/lsp-treemacs" :package "lsp-treemacs" :local-repo "lsp-treemacs")) "lsp-docker" ("2024-11-04 00:08:20" ("emacs" "dash" "lsp-mode" "f" "s" "yaml" "ht") (:type git :flavor melpa :host github :repo "emacs-lsp/lsp-docker" :package "lsp-docker" :local-repo "lsp-docker")) "yaml" ("2024-11-04 00:08:20" ("emacs") (:type git :flavor melpa :host github :repo "zkry/yaml.el" :package "yaml" :local-repo "yaml.el")) "typescript-mode" ("2024-11-04 00:08:20" ("emacs") (:type git :flavor melpa :host github :repo "emacs-typescript/typescript.el" :package "typescript-mode" :local-repo "typescript.el")) "lsp-ui" ("2024-11-04 00:08:20" ("emacs" "dash" "lsp-mode" "markdown-mode") (:type git :flavor melpa :files (:defaults "lsp-ui-doc.html" "resources" "lsp-ui-pkg.el") :host github :repo "emacs-lsp/lsp-ui" :package "lsp-ui" :local-repo "lsp-ui")) "lsp-ivy" ("2024-11-04 00:08:20" ("emacs" "dash" "lsp-mode" "ivy") (:type git :flavor melpa :host github :repo "emacs-lsp/lsp-ivy" :package "lsp-ivy" :local-repo "lsp-ivy")) "ivy" ("2024-11-04 00:08:20" ("emacs") (:type git :flavor melpa :files (:defaults "doc/ivy-help.org" (:exclude "swiper.el" "counsel.el" "ivy-hydra.el" "ivy-avy.el") "ivy-pkg.el") :host github :repo "abo-abo/swiper" :package "ivy" :local-repo "swiper")) "which-key" ("2024-11-04 00:08:20" ("emacs") (:type git :flavor melpa :host github :repo "justbur/emacs-which-key" :package "which-key" :local-repo "emacs-which-key")) "magit" ("2024-11-04 00:08:20" ("emacs" "compat" "dash" "magit-section" "seq" "transient" "with-editor") (:type git :flavor melpa :files ("lisp/magit*.el" "lisp/git-*.el" "docs/magit.texi" "docs/AUTHORS.md" "LICENSE" "magit-pkg.el" (:exclude "lisp/magit-section.el") "magit-pkg.el") :host github :repo "magit/magit" :package "magit" :local-repo "magit")) "compat" ("2024-11-04 00:08:20" ("emacs" "seq") (:type git :host github :repo "emacs-straight/compat" :files ("*" (:exclude ".git")) :package "compat" :local-repo "compat")) "magit-section" ("2024-11-04 00:08:20" ("emacs" "compat" "dash" "seq") (:flavor melpa :files ("lisp/magit-section.el" "docs/magit-section.texi" "magit-section-pkg.el" "magit-section-pkg.el") :package "magit-section" :local-repo "magit" :type git :repo "magit/magit" :host github)) "transient" ("2024-11-04 00:08:20" ("emacs" "compat" "seq") (:type git :flavor melpa :host github :repo "magit/transient" :package "transient" :local-repo "transient")) "with-editor" ("2024-11-04 00:08:20" ("emacs" "compat") (:type git :flavor melpa :host github :repo "magit/with-editor" :package "with-editor" :local-repo "with-editor")) "multiple-cursors" ("2024-11-04 00:08:21" ("cl-lib") (:type git :flavor melpa :host github :repo "magnars/multiple-cursors.el" :package "multiple-cursors" :local-repo "multiple-cursors.el")) "pdf-tools" ("2024-11-04 00:08:21" ("emacs" "tablist" "let-alist") (:type git :flavor melpa :files (:defaults "README" ("build" "Makefile") ("build" "server") "pdf-tools-pkg.el") :host github :repo "vedang/pdf-tools" :package "pdf-tools" :local-repo "pdf-tools")) "tablist" ("2024-11-04 00:08:21" ("emacs") (:type git :flavor melpa :host github :repo "emacsorphanage/tablist" :package "tablist" :local-repo "tablist")) "let-alist" ("2024-11-04 00:08:21" ("emacs") (:type git :host github :repo "emacs-straight/let-alist" :files ("*" (:exclude ".git")) :package "let-alist" :local-repo "let-alist")) "rainbow-delimiters" ("2024-11-04 00:08:21" nil (:type git :flavor melpa :host github :repo "Fanael/rainbow-delimiters" :package "rainbow-delimiters" :local-repo "rainbow-delimiters")) "projectile" ("2024-11-04 00:08:21" ("emacs") (:type git :flavor melpa :host github :repo "bbatsov/projectile" :package "projectile" :local-repo "projectile")) "neotree" ("2024-11-04 00:08:21" ("cl-lib") (:type git :flavor melpa :files (:defaults "icons" "neotree-pkg.el") :host github :repo "jaypei/emacs-neotree" :package "neotree" :local-repo "emacs-neotree")) "helpful" ("2024-11-04 00:08:21" ("emacs" "dash" "s" "f" "elisp-refs") (:type git :flavor melpa :host github :repo "Wilfred/helpful" :package "helpful" :local-repo "helpful")) "elisp-refs" ("2024-11-04 00:08:21" ("dash" "s") (:type git :flavor melpa :files (:defaults (:exclude "elisp-refs-bench.el") "elisp-refs-pkg.el") :host github :repo "Wilfred/elisp-refs" :package "elisp-refs" :local-repo "elisp-refs")) "counsel" ("2024-11-04 00:08:21" ("emacs" "ivy" "swiper") (:flavor melpa :files ("counsel.el" "counsel-pkg.el") :package "counsel" :local-repo "swiper" :type git :repo "abo-abo/swiper" :host github)) "swiper" ("2024-11-04 00:08:21" ("emacs" "ivy") (:flavor melpa :files ("swiper.el" "swiper-pkg.el") :package "swiper" :local-repo "swiper" :type git :repo "abo-abo/swiper" :host github)) "smex" ("2024-11-04 00:08:21" ("emacs") (:type git :flavor melpa :host github :repo "nonsequitur/smex" :package "smex" :local-repo "smex")) "all-the-icons-ivy-rich" ("2024-11-04 00:08:21" ("emacs" "ivy-rich" "all-the-icons") (:type git :flavor melpa :host github :repo "seagle0128/all-the-icons-ivy-rich" :package "all-the-icons-ivy-rich" :local-repo "all-the-icons-ivy-rich")) "ivy-rich" ("2024-11-04 00:08:21" ("emacs" "ivy") (:type git :flavor melpa :host github :repo "Yevgnen/ivy-rich" :package "ivy-rich" :local-repo "ivy-rich")) "peep-dired" ("2024-11-04 00:08:21" nil (:type git :flavor melpa :host github :repo "asok/peep-dired" :package "peep-dired" :local-repo "peep-dired")) "ivy-xref" ("2024-09-29 17:04:54" ("emacs" "ivy") (:type git :flavor melpa :host github :repo "alexmurray/ivy-xref" :package "ivy-xref" :local-repo "ivy-xref")) "centaur-tabs" ("2024-11-04 00:08:21" ("emacs" "powerline") (:type git :flavor melpa :host github :repo "ema2159/centaur-tabs" :package "centaur-tabs" :local-repo "centaur-tabs")) "powerline" ("2024-11-04 00:08:21" ("cl-lib") (:type git :flavor melpa :host github :repo "milkypostman/powerline" :package "powerline" :local-repo "powerline")) "org" ("2024-11-04 00:08:21" ("emacs") (:type git :repo "https://git.savannah.gnu.org/git/emacs/org-mode.git" :local-repo "org" :depth full :pre-build (straight-recipes-org-elpa--build) :build (:not autoloads) :files (:defaults "lisp/*.el" ("etc/styles/" "etc/styles/*")) :package "org")) "org-superstar" ("2024-11-04 00:08:21" ("org" "emacs") (:type git :flavor melpa :host github :repo "integral-dw/org-superstar-mode" :package "org-superstar" :local-repo "org-superstar-mode")) "toc-org" ("2024-11-04 00:08:21" nil (:type git :flavor melpa :host github :repo "snosov1/toc-org" :package "toc-org" :local-repo "toc-org")) "all-the-icons-dired" ("2024-09-29 16:44:24" ("emacs" "all-the-icons") (:type git :flavor melpa :host github :repo "wyuenho/all-the-icons-dired" :package "all-the-icons-dired" :local-repo "all-the-icons-dired")) "nerd-icons-dired" ("2024-11-04 00:08:21" ("emacs" "nerd-icons") (:type git :flavor melpa :host github :repo "rainstormstudio/nerd-icons-dired" :package "nerd-icons-dired" :local-repo "nerd-icons-dired")) "company-box" ("2024-09-29 16:50:54" ("emacs" "dash" "company" "frame-local") (:type git :flavor melpa :files (:defaults "images" "company-box-pkg.el") :host github :repo "sebastiencs/company-box" :package "company-box" :local-repo "company-box")) "frame-local" ("2024-09-29 16:50:54" ("emacs") (:type git :flavor melpa :host github :repo "sebastiencs/frame-local" :package "frame-local" :local-repo "frame-local")) "lsp-pyright" ("2024-11-04 00:08:20" ("emacs" "lsp-mode" "dash" "ht") (:type git :flavor melpa :host github :repo "emacs-lsp/lsp-pyright" :package "lsp-pyright" :local-repo "lsp-pyright")) "vterm" ("2024-11-04 00:08:20" ("emacs") (:type git :flavor melpa :files ("CMakeLists.txt" "elisp.c" "elisp.h" "emacs-module.h" "etc" "utf8.c" "utf8.h" "vterm.el" "vterm-module.c" "vterm-module.h" "vterm-pkg.el") :host github :repo "akermu/emacs-libvterm" :package "vterm" :local-repo "emacs-libvterm")) "vterm-toggle" ("2024-11-04 00:08:20" ("emacs" "vterm") (:type git :flavor melpa :host github :repo "jixiuf/vterm-toggle" :package "vterm-toggle" :local-repo "vterm-toggle")) "org-roam" ("2024-11-04 00:08:21" ("emacs" "dash" "org" "emacsql" "magit-section") (:type git :flavor melpa :files (:defaults "extensions/*" "org-roam-pkg.el") :host github :repo "org-roam/org-roam" :package "org-roam" :local-repo "org-roam")) "emacsql" ("2024-11-04 00:08:21" ("emacs") (:type git :flavor melpa :files (:defaults "README.md" "sqlite" "emacsql-pkg.el") :host github :repo "magit/emacsql" :package "emacsql" :local-repo "emacsql")) "company-coq" ("2024-11-04 00:08:20" ("cl-lib" "dash" "yasnippet" "company" "company-math") (:type git :flavor melpa :files (:defaults "refman" "company-coq-pkg.el") :host github :repo "cpitclaudel/company-coq" :package "company-coq" :local-repo "company-coq")) "company-math" ("2024-11-04 00:08:20" ("company" "math-symbol-lists") (:type git :flavor melpa :host github :repo "vspinu/company-math" :package "company-math" :local-repo "company-math")) "math-symbol-lists" ("2024-11-04 00:08:20" nil (:type git :flavor melpa :host github :repo "vspinu/math-symbol-lists" :package "math-symbol-lists" :local-repo "math-symbol-lists")) "pyenv-mode" ("2024-10-07 00:10:27" ("emacs" "pythonic") (:type git :flavor melpa :host github :repo "pythonic-emacs/pyenv-mode" :package "pyenv-mode" :local-repo "pyenv-mode")) "pythonic" ("2024-10-07 00:10:27" ("emacs" "s" "f") (:type git :flavor melpa :host github :repo "pythonic-emacs/pythonic" :package "pythonic" :local-repo "pythonic")) "move-text" ("2024-11-04 00:08:19" nil (:type git :flavor melpa :host github :repo "emacsfodder/move-text" :package "move-text" :local-repo "move-text")) "pyenv" ("2024-10-07 00:42:29" nil (:type git :host github :repo "shellbj/pyenv.el" :files (:defaults) :package "pyenv" :local-repo "pyenv.el")) "pipenv" ("2024-10-07 00:26:03" ("emacs" "s" "pyvenv" "load-env-vars") (:type git :flavor melpa :host github :repo "pwalsh/pipenv.el" :package "pipenv" :local-repo "pipenv.el")) "pyvenv" ("2024-10-07 00:26:03" nil (:type git :flavor melpa :host github :repo "jorgenschaefer/pyvenv" :package "pyvenv" :local-repo "pyvenv")) "load-env-vars" ("2024-10-07 00:26:03" ("emacs") (:type git :flavor melpa :host github :repo "diasjorge/emacs-load-env-vars" :package "load-env-vars" :local-repo "emacs-load-env-vars")) "pyimport" ("2024-10-07 00:39:05" ("dash" "s" "shut-up") (:type git :flavor melpa :host github :repo "Wilfred/pyimport" :package "pyimport" :local-repo "pyimport")) "shut-up" ("2024-10-07 00:39:05" ("cl-lib" "emacs") (:type git :flavor melpa :host github :repo "cask/shut-up" :package "shut-up" :local-repo "shut-up")) "treesit-auto" ("2024-10-10 02:08:30" ("emacs") (:type git :flavor melpa :host github :repo "renzmann/treesit-auto" :package "treesit-auto" :local-repo "treesit-auto")) "quickrun" ("2024-11-04 00:08:20" ("emacs" "ht") (:type git :flavor melpa :host github :repo "emacsorphanage/quickrun" :package "quickrun" :local-repo "quickrun"))))
 
 #s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data ("straight" ((straight-autoloads straight straight-x straight-ert-print-hack) (autoload 'straight-remove-unused-repos "straight" "Remove unused repositories from the repos and build directories.
 A repo is considered \"unused\" if it was not explicitly requested via
@@ -6093,10 +6093,518 @@ evaluate `toc-org-mode'.
 The mode's hook is called both when the mode is enabled and when
 it is disabled.
 
-(fn &optional ARG)" t) (register-definition-prefixes "toc-org" '("toc-org-")) (provide 'toc-org-autoloads))))
+(fn &optional ARG)" t) (register-definition-prefixes "toc-org" '("toc-org-")) (provide 'toc-org-autoloads)) "all-the-icons-dired" ((all-the-icons-dired-autoloads all-the-icons-dired) (autoload 'all-the-icons-dired-mode "all-the-icons-dired" "Display all-the-icons icon for each file in a Dired buffer.
 
-#s(hash-table size 65 test eq rehash-size 1.5 rehash-threshold 0.8125 data (org-elpa #s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 15 "melpa" nil "gnu-elpa-mirror" nil "nongnu-elpa" nil "el-get" nil "emacsmirror-mirror" nil "straight" nil "use-package" nil "bind-key" nil "bug-hunter" nil "seq" nil "cl-lib" nil "all-the-icons" nil "nerd-icons" nil "adwaita-dark-theme" nil "dashboard" nil "mood-line" nil "hydra" nil "lv" nil "flycheck" nil "flycheck-inline" nil "company" nil "yasnippet" nil "lsp-mode" nil "dash" nil "f" nil "s" nil "ht" nil "spinner" nil "markdown-mode" nil "eldoc" nil "sly" nil "lsp-java" nil "request" nil "treemacs" nil "ace-window" nil "avy" nil "pfuture" nil "cfrs" nil "posframe" nil "dap-mode" nil "bui" nil "lsp-treemacs" nil "lsp-docker" nil "yaml" nil "typescript-mode" nil "lsp-ui" nil "lsp-ivy" nil "ivy" nil "which-key" nil "magit" nil "compat" nil "magit-section" nil "transient" nil "with-editor" nil "multiple-cursors" nil "pdf-tools" nil "tablist" nil "let-alist" nil "rainbow-delimiters" nil "projectile" nil "neotree" nil "helpful" nil "elisp-refs" nil "counsel" nil "swiper" nil "smex" nil "all-the-icons-ivy-rich" nil "ivy-rich" nil "peep-dired" nil "ivy-xref" nil "centaur-tabs" nil "powerline" nil "org" (org :type git :repo "https://git.savannah.gnu.org/git/emacs/org-mode.git" :local-repo "org" :depth full :pre-build (straight-recipes-org-elpa--build) :build (:not autoloads) :files (:defaults "lisp/*.el" ("etc/styles/" "etc/styles/*"))) "org-superstar" nil "toc-org" nil)) melpa #s(hash-table size 97 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "gnu-elpa-mirror" nil "nongnu-elpa" nil "el-get" (el-get :type git :flavor melpa :files (:defaults "methods" ("recipes" "recipes/el-get.rcp") "el-get-pkg.el") :host github :repo "dimitri/el-get") "emacsmirror-mirror" nil "straight" nil "use-package" (use-package :type git :flavor melpa :files (:defaults (:exclude "bind-key.el" "bind-chord.el" "use-package-chords.el" "use-package-ensure-system-package.el") "use-package-pkg.el") :host github :repo "jwiegley/use-package") "bind-key" (bind-key :type git :flavor melpa :files ("bind-key.el" "bind-key-pkg.el") :host github :repo "jwiegley/use-package") "bug-hunter" nil "seq" nil "cl-lib" nil "all-the-icons" (all-the-icons :type git :flavor melpa :files (:defaults "data" "all-the-icons-pkg.el") :host github :repo "domtronn/all-the-icons.el") "nerd-icons" (nerd-icons :type git :flavor melpa :files (:defaults "data" "nerd-icons-pkg.el") :host github :repo "rainstormstudio/nerd-icons.el") "adwaita-dark-theme" (adwaita-dark-theme :type git :flavor melpa :host gitlab :repo "jessieh/adwaita-dark-theme") "dashboard" (dashboard :type git :flavor melpa :files (:defaults "banners" "dashboard-pkg.el") :host github :repo "emacs-dashboard/emacs-dashboard") "mood-line" (mood-line :type git :flavor melpa :host gitlab :repo "jessieh/mood-line") "hydra" (hydra :type git :flavor melpa :files (:defaults (:exclude "lv.el") "hydra-pkg.el") :host github :repo "abo-abo/hydra") "lv" (lv :type git :flavor melpa :files ("lv.el" "lv-pkg.el") :host github :repo "abo-abo/hydra") "flycheck" (flycheck :type git :flavor melpa :host github :repo "flycheck/flycheck") "flycheck-inline" (flycheck-inline :type git :flavor melpa :host github :repo "flycheck/flycheck-inline") "company" (company :type git :flavor melpa :files (:defaults "icons" ("images/small" "doc/images/small/*.png") "company-pkg.el") :host github :repo "company-mode/company-mode") "yasnippet" (yasnippet :type git :flavor melpa :files ("yasnippet.el" "snippets" "yasnippet-pkg.el") :host github :repo "joaotavora/yasnippet") "lsp-mode" (lsp-mode :type git :flavor melpa :files (:defaults "clients/*.el" "lsp-mode-pkg.el") :host github :repo "emacs-lsp/lsp-mode") "dash" (dash :type git :flavor melpa :files ("dash.el" "dash.texi" "dash-pkg.el") :host github :repo "magnars/dash.el") "f" (f :type git :flavor melpa :host github :repo "rejeep/f.el") "s" (s :type git :flavor melpa :host github :repo "magnars/s.el") "ht" (ht :type git :flavor melpa :host github :repo "Wilfred/ht.el") "spinner" nil "markdown-mode" (markdown-mode :type git :flavor melpa :host github :repo "jrblevin/markdown-mode") "eldoc" nil "sly" (sly :type git :flavor melpa :files (:defaults "lib" "slynk" "contrib" "doc/images" (:exclude "sly-autoloads.el") "sly-pkg.el") :host github :repo "joaotavora/sly") "lsp-java" (lsp-java :type git :flavor melpa :files (:defaults "icons" "lsp-java-pkg.el") :host github :repo "emacs-lsp/lsp-java") "request" (request :type git :flavor melpa :files ("request.el" "request-pkg.el") :host github :repo "tkf/emacs-request") "treemacs" (treemacs :type git :flavor melpa :files (:defaults "Changelog.org" "icons" "src/elisp/treemacs*.el" "src/scripts/treemacs*.py" (:exclude "src/extra/*") "treemacs-pkg.el") :host github :repo "Alexander-Miller/treemacs") "ace-window" (ace-window :type git :flavor melpa :host github :repo "abo-abo/ace-window") "avy" (avy :type git :flavor melpa :host github :repo "abo-abo/avy") "pfuture" (pfuture :type git :flavor melpa :host github :repo "Alexander-Miller/pfuture") "cfrs" (cfrs :type git :flavor melpa :host github :repo "Alexander-Miller/cfrs") "posframe" (posframe :type git :flavor melpa :host github :repo "tumashu/posframe") "dap-mode" (dap-mode :type git :flavor melpa :files (:defaults "icons" "dap-mode-pkg.el") :host github :repo "emacs-lsp/dap-mode") "bui" (bui :type git :flavor melpa :host github :repo "alezost/bui.el") "lsp-treemacs" (lsp-treemacs :type git :flavor melpa :files (:defaults "icons" "lsp-treemacs-pkg.el") :host github :repo "emacs-lsp/lsp-treemacs") "lsp-docker" (lsp-docker :type git :flavor melpa :host github :repo "emacs-lsp/lsp-docker") "yaml" (yaml :type git :flavor melpa :host github :repo "zkry/yaml.el") "typescript-mode" (typescript-mode :type git :flavor melpa :host github :repo "emacs-typescript/typescript.el") "lsp-ui" (lsp-ui :type git :flavor melpa :files (:defaults "lsp-ui-doc.html" "resources" "lsp-ui-pkg.el") :host github :repo "emacs-lsp/lsp-ui") "lsp-ivy" (lsp-ivy :type git :flavor melpa :host github :repo "emacs-lsp/lsp-ivy") "ivy" (ivy :type git :flavor melpa :files (:defaults "doc/ivy-help.org" (:exclude "swiper.el" "counsel.el" "ivy-hydra.el" "ivy-avy.el") "ivy-pkg.el") :host github :repo "abo-abo/swiper") "which-key" (which-key :type git :flavor melpa :host github :repo "justbur/emacs-which-key") "magit" (magit :type git :flavor melpa :files ("lisp/magit*.el" "lisp/git-*.el" "docs/magit.texi" "docs/AUTHORS.md" "LICENSE" "magit-pkg.el" (:exclude "lisp/magit-section.el") "magit-pkg.el") :host github :repo "magit/magit") "compat" nil "magit-section" (magit-section :type git :flavor melpa :files ("lisp/magit-section.el" "docs/magit-section.texi" "magit-section-pkg.el" "magit-section-pkg.el") :host github :repo "magit/magit") "transient" (transient :type git :flavor melpa :host github :repo "magit/transient") "with-editor" (with-editor :type git :flavor melpa :host github :repo "magit/with-editor") "multiple-cursors" (multiple-cursors :type git :flavor melpa :host github :repo "magnars/multiple-cursors.el") "pdf-tools" (pdf-tools :type git :flavor melpa :files (:defaults "README" ("build" "Makefile") ("build" "server") "pdf-tools-pkg.el") :host github :repo "vedang/pdf-tools") "tablist" (tablist :type git :flavor melpa :host github :repo "emacsorphanage/tablist") "let-alist" nil "rainbow-delimiters" (rainbow-delimiters :type git :flavor melpa :host github :repo "Fanael/rainbow-delimiters") "projectile" (projectile :type git :flavor melpa :host github :repo "bbatsov/projectile") "neotree" (neotree :type git :flavor melpa :files (:defaults "icons" "neotree-pkg.el") :host github :repo "jaypei/emacs-neotree") "helpful" (helpful :type git :flavor melpa :host github :repo "Wilfred/helpful") "elisp-refs" (elisp-refs :type git :flavor melpa :files (:defaults (:exclude "elisp-refs-bench.el") "elisp-refs-pkg.el") :host github :repo "Wilfred/elisp-refs") "counsel" (counsel :type git :flavor melpa :files ("counsel.el" "counsel-pkg.el") :host github :repo "abo-abo/swiper") "swiper" (swiper :type git :flavor melpa :files ("swiper.el" "swiper-pkg.el") :host github :repo "abo-abo/swiper") "smex" (smex :type git :flavor melpa :host github :repo "nonsequitur/smex") "all-the-icons-ivy-rich" (all-the-icons-ivy-rich :type git :flavor melpa :host github :repo "seagle0128/all-the-icons-ivy-rich") "ivy-rich" (ivy-rich :type git :flavor melpa :host github :repo "Yevgnen/ivy-rich") "peep-dired" (peep-dired :type git :flavor melpa :host github :repo "asok/peep-dired") "ivy-xref" (ivy-xref :type git :flavor melpa :host github :repo "alexmurray/ivy-xref") "centaur-tabs" (centaur-tabs :type git :flavor melpa :host github :repo "ema2159/centaur-tabs") "powerline" (powerline :type git :flavor melpa :host github :repo "milkypostman/powerline") "org-superstar" (org-superstar :type git :flavor melpa :host github :repo "integral-dw/org-superstar-mode") "toc-org" (toc-org :type git :flavor melpa :host github :repo "snosov1/toc-org"))) gnu-elpa-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 3 "nongnu-elpa" nil "emacsmirror-mirror" nil "straight" nil "bug-hunter" (bug-hunter :type git :host github :repo "emacs-straight/bug-hunter" :files ("*" (:exclude ".git"))) "seq" (seq :type git :host github :repo "emacs-straight/seq" :files ("*" (:exclude ".git"))) "cl-lib" nil "spinner" (spinner :type git :host github :repo "emacs-straight/spinner" :files ("*" (:exclude ".git"))) "eldoc" (eldoc :type git :host github :repo "emacs-straight/eldoc" :files ("*" (:exclude ".git"))) "compat" (compat :type git :host github :repo "emacs-straight/compat" :files ("*" (:exclude ".git"))) "let-alist" (let-alist :type git :host github :repo "emacs-straight/let-alist" :files ("*" (:exclude ".git"))))) nongnu-elpa #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 4 "emacsmirror-mirror" nil "straight" nil "cl-lib" nil)) el-get #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "emacsmirror-mirror" nil "straight" nil "cl-lib" nil)) emacsmirror-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "straight" (straight :type git :host github :repo "emacsmirror/straight") "cl-lib" nil))))
+This is a minor mode.  If called interactively, toggle the
+`All-The-Icons-Dired mode' mode.  If the prefix argument is
+positive, enable the mode, and if it is zero or negative, disable
+the mode.
 
-("toc-org" "org-superstar" "org" "powerline" "centaur-tabs" "ivy-xref" "peep-dired" "ivy-rich" "all-the-icons-ivy-rich" "smex" "swiper" "counsel" "elisp-refs" "helpful" "neotree" "projectile" "rainbow-delimiters" "let-alist" "tablist" "pdf-tools" "multiple-cursors" "with-editor" "transient" "magit-section" "compat" "magit" "which-key" "ivy" "lsp-ivy" "lsp-ui" "typescript-mode" "yaml" "lsp-docker" "lsp-treemacs" "bui" "dap-mode" "posframe" "cfrs" "pfuture" "avy" "ace-window" "treemacs" "request" "lsp-java" "sly" "eldoc" "markdown-mode" "spinner" "ht" "s" "f" "dash" "lsp-mode" "yasnippet" "company" "flycheck-inline" "flycheck" "lv" "hydra" "mood-line" "dashboard" "adwaita-dark-theme" "nerd-icons" "all-the-icons" "cl-lib" "seq" "bug-hunter" "bind-key" "use-package" "emacs" "straight" "emacsmirror-mirror" "el-get" "nongnu-elpa" "gnu-elpa-mirror" "melpa" "org-elpa")
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `all-the-icons-dired-mode'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
+(fn &optional ARG)" t) (register-definition-prefixes "all-the-icons-dired" '("all-the-icons-dired-")) (provide 'all-the-icons-dired-autoloads)) "nerd-icons-dired" ((nerd-icons-dired-autoloads nerd-icons-dired) (autoload 'nerd-icons-dired-mode "nerd-icons-dired" "Display nerd-icons icon for each files in a Dired buffer.
+
+This is a minor mode.  If called interactively, toggle the
+`Nerd-Icons-Dired mode' mode.  If the prefix argument is
+positive, enable the mode, and if it is zero or negative, disable
+the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `nerd-icons-dired-mode'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
+(fn &optional ARG)" t) (register-definition-prefixes "nerd-icons-dired" '("nerd-icons-dired-")) (provide 'nerd-icons-dired-autoloads)) "frame-local" ((frame-local-autoloads frame-local) (register-definition-prefixes "frame-local" '("frame-local-")) (provide 'frame-local-autoloads)) "company-box" ((company-box-autoloads company-box company-box-icons company-box-doc) (autoload 'company-box-mode "company-box" "Company-box minor mode.
+
+This is a minor mode.  If called interactively, toggle the
+`company-box mode' mode.  If the prefix argument is positive,
+enable the mode, and if it is zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `company-box-mode'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
+(fn &optional ARG)" t) (register-definition-prefixes "company-box" '("company-box-")) (register-definition-prefixes "company-box-doc" '("company-box-")) (register-definition-prefixes "company-box-icons" '("company-box-icons-")) (provide 'company-box-autoloads)) "lsp-pyright" ((lsp-pyright-autoloads lsp-pyright) (register-definition-prefixes "lsp-pyright" '("lsp-pyright-")) (provide 'lsp-pyright-autoloads)) "vterm" ((vterm-autoloads vterm) (autoload 'vterm-module-compile "vterm" "Compile vterm-module." t) (autoload 'vterm--bookmark-handler "vterm" "Handler to restore a vterm bookmark BMK.
+
+If a vterm buffer of the same name does not exist, the function will create a
+new vterm buffer of the name. It also checks the current directory and sets
+it to the bookmarked directory if needed.
+
+(fn BMK)") (autoload 'vterm-next-error-function "vterm" "Advance to the next error message and visit the file where the error was.
+This is the value of `next-error-function' in Compilation
+buffers.  Prefix arg N says how many error messages to move
+forwards (or backwards, if negative).
+
+Optional argument RESET clears all the errors.
+
+(fn N &optional RESET)" t) (autoload 'vterm "vterm" "Create an interactive Vterm buffer.
+Start a new Vterm session, or switch to an already active
+session.  Return the buffer selected (or created).
+
+With a nonnumeric prefix arg, create a new session.
+
+With a string prefix arg, create a new session with arg as buffer name.
+
+With a numeric prefix arg (as in `C-u 42 M-x vterm RET'), switch
+to the session with that number, or create it if it doesn't
+already exist.
+
+The buffer name used for Vterm sessions is determined by the
+value of `vterm-buffer-name'.
+
+(fn &optional ARG)" t) (autoload 'vterm-other-window "vterm" "Create an interactive Vterm buffer in another window.
+Start a new Vterm session, or switch to an already active
+session.  Return the buffer selected (or created).
+
+With a nonnumeric prefix arg, create a new session.
+
+With a string prefix arg, create a new session with arg as buffer name.
+
+With a numeric prefix arg (as in `C-u 42 M-x vterm RET'), switch
+to the session with that number, or create it if it doesn't
+already exist.
+
+The buffer name used for Vterm sessions is determined by the
+value of `vterm-buffer-name'.
+
+(fn &optional ARG)" t) (register-definition-prefixes "vterm" '("vterm-")) (provide 'vterm-autoloads)) "vterm-toggle" ((vterm-toggle-autoloads vterm-toggle) (autoload 'vterm-toggle "vterm-toggle" "Vterm toggle.
+Optional argument ARGS .
+
+(fn &optional ARGS)" t) (autoload 'vterm-toggle-cd "vterm-toggle" "Vterm toggle and insert a cd command.
+Optional argument ARGS .
+
+(fn &optional ARGS)" t) (autoload 'vterm-toggle-insert-cd "vterm-toggle" "Cd to the directory where your previous buffer file exists.
+after you have toggle to the vterm buffer with `vterm-toggle'." t) (autoload 'vterm-toggle-forward "vterm-toggle" "Go to the next term buffer.
+If OFFSET is `non-nil', will goto next term buffer with OFFSET.
+
+(fn &optional OFFSET)" t) (autoload 'vterm-toggle-backward "vterm-toggle" "Go to the previous term buffer.
+If OFFSET is `non-nil', will goto next term buffer with OFFSET.
+
+(fn &optional OFFSET)" t) (register-definition-prefixes "vterm-toggle" '("vterm-")) (provide 'vterm-toggle-autoloads)) "emacsql" ((emacsql-autoloads emacsql emacsql-sqlite emacsql-sqlite-module emacsql-sqlite-common emacsql-sqlite-builtin emacsql-psql emacsql-pg emacsql-mysql emacsql-compiler) (autoload 'emacsql-show-last-sql "emacsql" "Display the compiled SQL of the s-expression SQL expression before point.
+A prefix argument causes the SQL to be printed into the current buffer.
+
+(fn &optional PREFIX)" t) (register-definition-prefixes "emacsql" '("emacsql-")) (register-definition-prefixes "emacsql-compiler" '("emacsql-")) (register-definition-prefixes "emacsql-mysql" '("emacsql-mysql-")) (register-definition-prefixes "emacsql-pg" '("emacsql-pg-connection")) (register-definition-prefixes "emacsql-psql" '("emacsql-psql-")) (register-definition-prefixes "emacsql-sqlite" '("emacsql-sqlite-")) (register-definition-prefixes "emacsql-sqlite-builtin" '("emacsql-sqlite-builtin-connection")) (register-definition-prefixes "emacsql-sqlite-common" '("emacsql-")) (register-definition-prefixes "emacsql-sqlite-module" '("emacsql-sqlite-module-connection")) (provide 'emacsql-autoloads)) "org-roam" ((org-roam-autoloads org-roam-protocol org-roam-overlay org-roam-graph org-roam-export org-roam-dailies org-roam org-roam-utils org-roam-node org-roam-mode org-roam-migrate org-roam-log org-roam-id org-roam-db org-roam-compat org-roam-capture) (autoload 'org-roam-list-files "org-roam" "Return a list of all Org-roam files under `org-roam-directory'.
+See `org-roam-file-p' for how each file is determined to be as
+part of Org-Roam.") (register-definition-prefixes "org-roam" '("org-roam-")) (autoload 'org-roam-capture- "org-roam-capture" "Main entry point of `org-roam-capture' module.
+GOTO and KEYS correspond to `org-capture' arguments.
+INFO is a plist for filling up Org-roam's capture templates.
+NODE is an `org-roam-node' construct containing information about the node.
+PROPS is a plist containing additional Org-roam properties for each template.
+TEMPLATES is a list of org-roam templates.
+
+(fn &key GOTO KEYS NODE INFO PROPS TEMPLATES)") (autoload 'org-roam-capture "org-roam-capture" "Launches an `org-capture' process for a new or existing node.
+This uses the templates defined at `org-roam-capture-templates'.
+Arguments GOTO and KEYS see `org-capture'.
+FILTER-FN is a function to filter out nodes: it takes an `org-roam-node',
+and when nil is returned the node will be filtered out.
+The TEMPLATES, if provided, override the list of capture templates (see
+`org-roam-capture-'.)
+The INFO, if provided, is passed along to the underlying `org-roam-capture-'.
+
+(fn &optional GOTO KEYS &key FILTER-FN TEMPLATES INFO)" t) (register-definition-prefixes "org-roam-capture" '("org-roam-capture-")) (register-definition-prefixes "org-roam-compat" '("org-roam--")) (autoload 'org-roam-dailies-capture-today "org-roam-dailies" "Create an entry in the daily-note for today.
+When GOTO is non-nil, go the note without creating an entry.
+
+ELisp programs can set KEYS to a string associated with a template.
+In this case, interactive selection will be bypassed.
+
+(fn &optional GOTO KEYS)" t) (autoload 'org-roam-dailies-goto-today "org-roam-dailies" "Find the daily-note for today, creating it if necessary.
+
+ELisp programs can set KEYS to a string associated with a template.
+In this case, interactive selection will be bypassed.
+
+(fn &optional KEYS)" t) (autoload 'org-roam-dailies-capture-tomorrow "org-roam-dailies" "Create an entry in the daily-note for tomorrow.
+
+With numeric argument N, use the daily-note N days in the future.
+
+With a `C-u' prefix or when GOTO is non-nil, go the note without
+creating an entry.
+
+ELisp programs can set KEYS to a string associated with a template.
+In this case, interactive selection will be bypassed.
+
+(fn N &optional GOTO KEYS)" t) (autoload 'org-roam-dailies-goto-tomorrow "org-roam-dailies" "Find the daily-note for tomorrow, creating it if necessary.
+
+With numeric argument N, use the daily-note N days in the
+future.
+
+ELisp programs can set KEYS to a string associated with a template.
+In this case, interactive selection will be bypassed.
+
+(fn N &optional KEYS)" t) (autoload 'org-roam-dailies-capture-yesterday "org-roam-dailies" "Create an entry in the daily-note for yesteday.
+
+With numeric argument N, use the daily-note N days in the past.
+
+When GOTO is non-nil, go the note without creating an entry.
+
+ELisp programs can set KEYS to a string associated with a template.
+In this case, interactive selection will be bypassed.
+
+(fn N &optional GOTO KEYS)" t) (autoload 'org-roam-dailies-goto-yesterday "org-roam-dailies" "Find the daily-note for yesterday, creating it if necessary.
+
+With numeric argument N, use the daily-note N days in the
+future.
+
+ELisp programs can set KEYS to a string associated with a template.
+In this case, interactive selection will be bypassed.
+
+(fn N &optional KEYS)" t) (autoload 'org-roam-dailies-capture-date "org-roam-dailies" "Create an entry in the daily-note for a date using the calendar.
+Prefer past dates, unless PREFER-FUTURE is non-nil.
+With a `C-u' prefix or when GOTO is non-nil, go the note without
+creating an entry.
+
+ELisp programs can set KEYS to a string associated with a template.
+In this case, interactive selection will be bypassed.
+
+(fn &optional GOTO PREFER-FUTURE KEYS)" t) (autoload 'org-roam-dailies-goto-date "org-roam-dailies" "Find the daily-note for a date using the calendar, creating it if necessary.
+Prefer past dates, unless PREFER-FUTURE is non-nil.
+
+ELisp programs can set KEYS to a string associated with a template.
+In this case, interactive selection will be bypassed.
+
+(fn &optional PREFER-FUTURE KEYS)" t) (autoload 'org-roam-dailies-find-directory "org-roam-dailies" "Find and open `org-roam-dailies-directory'." t) (register-definition-prefixes "org-roam-dailies" '("org-roam-dailies-")) (autoload 'org-roam-db-sync "org-roam-db" "Synchronize the cache state with the current Org files on-disk.
+If FORCE, force a rebuild of the cache from scratch.
+
+(fn &optional FORCE)" t) (defvar org-roam-db-autosync-mode nil "Non-nil if Org-Roam-Db-Autosync mode is enabled.
+See the `org-roam-db-autosync-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `org-roam-db-autosync-mode'.") (custom-autoload 'org-roam-db-autosync-mode "org-roam-db" nil) (autoload 'org-roam-db-autosync-mode "org-roam-db" "Global minor mode to keep your Org-roam session automatically synchronized.
+
+Through the session this will continue to setup your
+buffers (that are Org-roam file visiting), keep track of the
+related changes, maintain cache consistency and incrementally
+update the currently active database.
+
+If you need to manually trigger resync of the currently active
+database, see `org-roam-db-sync' command.
+
+This is a global minor mode.  If called interactively, toggle the
+`Org-Roam-Db-Autosync mode' mode.  If the prefix argument is
+positive, enable the mode, and if it is zero or negative, disable
+the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `(default-value \\='org-roam-db-autosync-mode)'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
+(fn &optional ARG)" t) (autoload 'org-roam-db-autosync-enable "org-roam-db" "Activate `org-roam-db-autosync-mode'.") (register-definition-prefixes "org-roam-db" '("emacsql-constraint" "org-roam-d")) (register-definition-prefixes "org-roam-export" '("org-roam-export--org-html--reference")) (autoload 'org-roam-graph "org-roam-graph" "Build and possibly display a graph for NODE.
+ARG may be any of the following values:
+  - nil       show the graph.
+  - `\\[universal-argument]'     show the graph for NODE.
+  - `\\[universal-argument]' N   show the graph for NODE limiting nodes to N steps.
+
+(fn &optional ARG NODE)" t) (register-definition-prefixes "org-roam-graph" '("org-roam-")) (autoload 'org-roam-update-org-id-locations "org-roam-id" "Scan Org-roam files to update `org-id' related state.
+This is like `org-id-update-id-locations', but will automatically
+use the currently bound `org-directory' and `org-roam-directory'
+along with DIRECTORIES (if any), where the lookup for files in
+these directories will be always recursive.
+
+Note: Org-roam doesn't have hard dependency on
+`org-id-locations-file' to lookup IDs for nodes that are stored
+in the database, but it still tries to properly integrates with
+`org-id'. This allows the user to cross-reference IDs outside of
+the current `org-roam-directory', and also link with \"id:\"
+links to headings/files within the current `org-roam-directory'
+that are excluded from identification in Org-roam as
+`org-roam-node's, e.g. with \"ROAM_EXCLUDE\" property.
+
+(fn &rest DIRECTORIES)" t) (register-definition-prefixes "org-roam-id" '("org-roam-id-")) (register-definition-prefixes "org-roam-log" '("org-roam-log-")) (autoload 'org-roam-migrate-wizard "org-roam-migrate" "Migrate all notes from to be compatible with Org-roam v2.
+1. Convert all notes from v1 format to v2.
+2. Rebuild the cache.
+3. Replace all file links with ID links." t) (register-definition-prefixes "org-roam-migrate" '("org-roam-migrate-")) (autoload 'org-roam-buffer-display-dedicated "org-roam-mode" "Launch NODE dedicated Org-roam buffer.
+Unlike the persistent `org-roam-buffer', the contents of this
+buffer won't be automatically changed and will be held in place.
+
+In interactive calls prompt to select NODE, unless called with
+`universal-argument', in which case NODE will be set to
+`org-roam-node-at-point'.
+
+(fn NODE)" t) (register-definition-prefixes "org-roam-mode" '("org-roam-")) (autoload 'org-roam-node-find "org-roam-node" "Find and open an Org-roam node by its title or alias.
+INITIAL-INPUT is the initial input for the prompt.
+FILTER-FN is a function to filter out nodes: it takes an `org-roam-node',
+and when nil is returned the node will be filtered out.
+If OTHER-WINDOW, visit the NODE in another window.
+The TEMPLATES, if provided, override the list of capture templates (see
+`org-roam-capture-'.)
+
+(fn &optional OTHER-WINDOW INITIAL-INPUT FILTER-FN PRED &key TEMPLATES)" t) (autoload 'org-roam-node-random "org-roam-node" "Find and open a random Org-roam node.
+With prefix argument OTHER-WINDOW, visit the node in another
+window instead.
+FILTER-FN is a function to filter out nodes: it takes an `org-roam-node',
+and when nil is returned the node will be filtered out.
+
+(fn &optional OTHER-WINDOW FILTER-FN)" t) (autoload 'org-roam-node-insert "org-roam-node" "Find an Org-roam node and insert (where the point is) an \"id:\" link to it.
+FILTER-FN is a function to filter out nodes: it takes an `org-roam-node',
+and when nil is returned the node will be filtered out.
+The TEMPLATES, if provided, override the list of capture templates (see
+`org-roam-capture-'.)
+The INFO, if provided, is passed to the underlying `org-roam-capture-'.
+
+(fn &optional FILTER-FN &key TEMPLATES INFO)" t) (autoload 'org-roam-refile "org-roam-node" "Refile node at point to an Org-roam node.
+If region is active, then use it instead of the node at point." t) (autoload 'org-roam-extract-subtree "org-roam-node" "Convert current subtree at point to a node, and extract it into a new file." t) (autoload 'org-roam-ref-find "org-roam-node" "Find and open an Org-roam node that's dedicated to a specific ref.
+INITIAL-INPUT is the initial input to the prompt.
+FILTER-FN is a function to filter out nodes: it takes an `org-roam-node',
+and when nil is returned the node will be filtered out.
+
+(fn &optional INITIAL-INPUT FILTER-FN)" t) (register-definition-prefixes "org-roam-node" '("org-roam-")) (register-definition-prefixes "org-roam-overlay" '("org-roam-overlay-")) (register-definition-prefixes "org-roam-protocol" '("org-roam-")) (autoload 'org-roam-version "org-roam-utils" "Return `org-roam' version.
+Interactively, or when MESSAGE is non-nil, show in the echo area.
+
+(fn &optional MESSAGE)" t) (autoload 'org-roam-diagnostics "org-roam-utils" "Collect and print info for `org-roam' issues." t) (register-definition-prefixes "org-roam-utils" '("org-roam-")) (provide 'org-roam-autoloads)) "math-symbol-lists" ((math-symbol-lists-autoloads msl-build math-symbol-lists) (register-definition-prefixes "math-symbol-lists" '("math-symbol-list-")) (register-definition-prefixes "msl-build" '("msl-")) (provide 'math-symbol-lists-autoloads)) "company-math" ((company-math-autoloads company-math) (autoload 'company-latex-commands "company-math" "Company backend for latex commands.
+COMMAND and ARG is as required by company backends.
+
+(fn COMMAND &optional ARG &rest IGNORED)" t) (autoload 'company-math-symbols-latex "company-math" "Company backend for LaTeX mathematical symbols.
+COMMAND and ARG is as required by company backends.
+
+(fn COMMAND &optional ARG &rest IGNORED)" t) (autoload 'company-math-symbols-unicode "company-math" "Company backend for insertion of Unicode mathematical symbols.
+COMMAND and ARG is as required by company backends.
+See the unicode-math page [1] for a list of fonts that have a
+good support for mathematical symbols. Unicode provides only a
+limited range of sub(super)scripts; see the wikipedia page [2]
+for details.
+
+ [1] http://ftp.snt.utwente.nl/pub/software/tex/help/Catalogue/entries/unicode-math.html
+ [2] https://en.wikipedia.org/wiki/Unicode_subscripts_and_superscripts
+
+(fn COMMAND &optional ARG &rest IGNORED)" t) (register-definition-prefixes "company-math" '("company-math-")) (provide 'company-math-autoloads)) "company-coq" ((company-coq-autoloads company-coq-pkg company-coq company-coq-utils company-coq-tg company-coq-abbrev) (autoload 'company-coq-tutorial "company-coq" "Open the company-coq tutorial, creating a new buffer if needed." t) (autoload 'company-coq-describe-feature "company-coq" "Describe company-coq feature FEATURE.
+
+(fn FEATURE)" t) (autoload 'company-coq-mode "company-coq" "Toggle company-coq-mode on or off.
+
+Company-Coq is a collection of Proof-General extensions.  See
+https://github.com/cpitclaudel/company-coq/ for a detailed
+description, including screenshots and documentation.  First time
+users may want to use \\[company-coq-tutorial] to open the
+tutorial.
+
+With a prefix argument ARG, enable %s if ARG is
+positive, and disable it otherwise.  If called from Lisp, enable
+the mode if ARG is omitted or nil, and toggle it if ARG is `toggle'.
+
+\\{company-coq-map}
+
+(fn &optional ARG)" t) (autoload 'company-coq-initialize "company-coq" "Deprecated: Use `company-coq-mode' instead." t) (register-definition-prefixes "company-coq" '("company-coq-" "toggle-company-coq-debug")) (register-definition-prefixes "company-coq-abbrev" '("company-coq--refman-")) (register-definition-prefixes "company-coq-tg" '("company-coq-")) (autoload 'company-coq-cite "company-coq-utils" "Insert BibTeX entries for Coq, PG, and company-coq." t) (register-definition-prefixes "company-coq-utils" '("company-coq--")) (provide 'company-coq-autoloads)) "pythonic" ((pythonic-autoloads pythonic) (autoload 'pythonic-activate "pythonic" "Activate python VIRTUALENV.
+
+(fn VIRTUALENV)" t) (autoload 'pythonic-deactivate "pythonic" "Deactivate python virtual environment." t) (register-definition-prefixes "pythonic" '("pythonic-")) (provide 'pythonic-autoloads)) "pyenv-mode" ((pyenv-mode-autoloads pyenv-mode) (autoload 'pyenv-mode-set "pyenv-mode" "Set python shell VERSION.
+
+(fn VERSION)" t) (autoload 'pyenv-mode-unset "pyenv-mode" "Unset python shell version." t) (defvar pyenv-mode nil "Non-nil if Pyenv mode is enabled.
+See the `pyenv-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `pyenv-mode'.") (custom-autoload 'pyenv-mode "pyenv-mode" nil) (autoload 'pyenv-mode "pyenv-mode" "Minor mode for pyenv interaction.
+
+\\{pyenv-mode-map}
+
+This is a global minor mode.  If called interactively, toggle the
+`Pyenv mode' mode.  If the prefix argument is positive, enable
+the mode, and if it is zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `(default-value \\='pyenv-mode)'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
+(fn &optional ARG)" t) (register-definition-prefixes "pyenv-mode" '("pyenv-mode-")) (provide 'pyenv-mode-autoloads)) "move-text" ((move-text-autoloads move-text) (autoload 'move-text--total-lines "move-text" "Convenience function to get the total lines in the buffer / or narrowed buffer.") (autoload 'move-text--at-first-line-p "move-text" "Predicate, is the point at the first line?") (autoload 'move-text--at-penultimate-line-p "move-text" "Predicate, is the point at the penultimate line?") (autoload 'move-text--last-line-is-just-newline "move-text" "Predicate, is last line just a newline?") (autoload 'move-text--at-last-line-p "move-text" "Predicate, is the point at the last line?") (autoload 'move-text-line-up "move-text" "Move the current line up." t) (autoload 'move-text-line-down "move-text" "Move the current line down." t) (autoload 'move-text-region "move-text" "Move the current region (START END) up or down by N lines.
+
+(fn START END N)" t) (autoload 'move-text-region-up "move-text" "Move the current region (START END) up by N lines.
+
+(fn START END N)" t) (autoload 'move-text-region-down "move-text" "Move the current region (START END) down by N lines.
+
+(fn START END N)" t) (autoload 'move-text-up "move-text" "Move the line or region (START END) up by N lines.
+
+(fn START END N)" t) (autoload 'move-text-down "move-text" "Move the line or region (START END) down by N lines.
+
+(fn START END N)" t) (autoload 'move-text-default-bindings "move-text" "Bind `move-text-up' and `move-text-down' to M-up & M-down." t) (register-definition-prefixes "move-text" '("move-text-get-region-and-prefix")) (provide 'move-text-autoloads)) "pyenv" ((pyenv-autoloads pyenv pyenv-pkg) (autoload 'pyenv-use-global "pyenv" "activate pyenv global python" t) (autoload 'pyenv-use-corresponding "pyenv" "search for .python-version and activate the corresponding python" t) (autoload 'pyenv-use "pyenv" "choose what python you want to activate
+
+(fn PYTHON-VERSION)" t) (defvar global-pyenv-mode nil "Non-nil if Global Pyenv mode is enabled.
+See the `global-pyenv-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `global-pyenv-mode'.") (custom-autoload 'global-pyenv-mode "pyenv" nil) (autoload 'global-pyenv-mode "pyenv" "use pyenv to configure the python version used by your Emacs.
+
+This is a global minor mode.  If called interactively, toggle the
+`Global Pyenv mode' mode.  If the prefix argument is positive,
+enable the mode, and if it is zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `(default-value \\='global-pyenv-mode)'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
+(fn &optional ARG)" t) (register-definition-prefixes "pyenv" '("pyenv")) (provide 'pyenv-autoloads)) "pyvenv" ((pyvenv-autoloads pyvenv) (autoload 'pyvenv-activate "pyvenv" "Activate the virtual environment in DIRECTORY.
+
+(fn DIRECTORY)" t) (autoload 'pyvenv-deactivate "pyvenv" "Deactivate any current virtual environment." t) (autoload 'pyvenv-workon "pyvenv" "Activate a virtual environment from $WORKON_HOME.
+
+If the virtual environment NAME is already active, this function
+does not try to reactivate the environment.
+
+(fn NAME)" t) (defvar pyvenv-mode nil "Non-nil if Pyvenv mode is enabled.
+See the `pyvenv-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `pyvenv-mode'.") (custom-autoload 'pyvenv-mode "pyvenv" nil) (autoload 'pyvenv-mode "pyvenv" "Global minor mode for pyvenv.
+
+Will show the current virtualenv in the mode line, and respect a
+`pyvenv-workon' setting in files.
+
+This is a global minor mode.  If called interactively, toggle the
+`Pyvenv mode' mode.  If the prefix argument is positive, enable
+the mode, and if it is zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `(default-value \\='pyvenv-mode)'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
+(fn &optional ARG)" t) (defvar pyvenv-tracking-mode nil "Non-nil if Pyvenv-Tracking mode is enabled.
+See the `pyvenv-tracking-mode' command
+for a description of this minor mode.
+Setting this variable directly does not take effect;
+either customize it (see the info node `Easy Customization')
+or call the function `pyvenv-tracking-mode'.") (custom-autoload 'pyvenv-tracking-mode "pyvenv" nil) (autoload 'pyvenv-tracking-mode "pyvenv" "Global minor mode to track the current virtualenv.
+
+When this mode is active, pyvenv will activate a buffer-specific
+virtualenv whenever the user switches to a buffer with a
+buffer-local `pyvenv-workon' or `pyvenv-activate' variable.
+
+This is a global minor mode.  If called interactively, toggle the
+`Pyvenv-Tracking mode' mode.  If the prefix argument is positive,
+enable the mode, and if it is zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `(default-value \\='pyvenv-tracking-mode)'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
+(fn &optional ARG)" t) (autoload 'pyvenv-restart-python "pyvenv" "Restart Python inferior processes." t) (register-definition-prefixes "pyvenv" '("pyvenv-")) (provide 'pyvenv-autoloads)) "load-env-vars" ((load-env-vars-autoloads load-env-vars) (autoload 'load-env-vars "load-env-vars" "Load environment variables found in FILE-PATH.
+
+(fn FILE-PATH)" t) (register-definition-prefixes "load-env-vars" '("load-env-vars-")) (provide 'load-env-vars-autoloads)) "pipenv" ((pipenv-autoloads pipenv) (autoload 'pipenv-mode "pipenv" "Minor mode for Pipenv.
+
+This is a minor mode.  If called interactively, toggle the
+`Pipenv mode' mode.  If the prefix argument is positive, enable
+the mode, and if it is zero or negative, disable the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `pipenv-mode'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
+(fn &optional ARG)" t) (register-definition-prefixes "pipenv" '("pipenv-")) (provide 'pipenv-autoloads)) "shut-up" ((shut-up-autoloads shut-up) (autoload 'shut-up "shut-up" "Evaluate BODY with silenced output.
+
+While BODY is evaluated, all output is redirected to a buffer,
+unless `shut-up-ignore' is non-nil.  This affects:
+
+- `message'
+- All functions using `standard-output' (e.g. `print', `princ', etc.)
+
+Inside BODY, the buffer is bound to the lexical variable
+`shut-up-sink'.  Additionally provide a lexical function
+`shut-up-current-output', which returns the current contents of
+`shut-up-sink' when called with no arguments.
+
+Changes to the variable `shut-up-ignore' inside BODY does not
+have any affect.
+
+(fn &rest BODY)" nil t) (function-put 'shut-up 'lisp-indent-function 0) (autoload 'shut-up-silence-emacs "shut-up" "Silence Emacs.
+
+Change Emacs settings to reduce the output.
+
+WARNING: This function has GLOBAL SIDE-EFFECTS.  You should only
+call this function in `noninteractive' sessions.") (register-definition-prefixes "shut-up" '("inhibit-message" "shut-up-")) (provide 'shut-up-autoloads)) "pyimport" ((pyimport-autoloads pyimport) (autoload 'pyimport-insert-missing "pyimport" "Try to insert an import for the symbol at point.
+If called with a prefix, choose which import to use.
+
+This is a simple heuristic: we just look for imports in all open Python buffers.
+
+(fn PREFIX)" t) (autoload 'pyimport-remove-unused "pyimport" "Remove unused imports in the current Python buffer." t) (register-definition-prefixes "pyimport" '("pyimport-")) (provide 'pyimport-autoloads)) "treesit-auto" ((treesit-auto-autoloads treesit-auto) (register-definition-prefixes "treesit-auto" '("global-treesit-auto-mode" "treesit-auto-")) (provide 'treesit-auto-autoloads)) "quickrun" ((quickrun-autoloads quickrun) (autoload 'quickrun-set-default "quickrun" "Set `key' as default key in programing language `lang'.
+
+(fn LANG KEY)") (autoload 'quickrun-select-default "quickrun" "Update the default." t) (autoload 'quickrun-add-command "quickrun" "Not documented.
+
+(fn KEY ALIST &key DEFAULT MODE OVERRIDE)") (function-put 'quickrun-add-command 'lisp-indent-function 'defun) (autoload 'quickrun "quickrun" "Run commands quickly for current buffer.
+
+With universal prefix argument(C-u), select command-key,
+With double prefix argument(C-u C-u), run in compile-only-mode.
+
+(fn &rest PLIST)" t) (autoload 'quickrun-select "quickrun" "Run commands after selecting the backend." t) (autoload 'quickrun-with-arg "quickrun" "Run commands quickly for current buffer with arguments.
+
+(fn ARG)" t) (autoload 'quickrun-region "quickrun" "Run commands with specified region.
+
+(fn START END)" t) (autoload 'quickrun-replace-region "quickrun" "Run commands with specified region and replace.
+
+(fn START END)" t) (autoload 'quickrun-eval-print "quickrun" "Run commands with specified region and replace.
+
+(fn START END)" t) (autoload 'quickrun-compile-only "quickrun" "Exec only compilation." t) (autoload 'quickrun-compile-only-select "quickrun" "Run commands after selecting the backend." t) (autoload 'quickrun-shell "quickrun" "Run commands in shell for interactive programs." t) (autoload 'quickrun-autorun-mode "quickrun" "`quickrun' after saving buffer.
+
+This is a minor mode.  If called interactively, toggle the
+`Quickrun-Autorun mode' mode.  If the prefix argument is
+positive, enable the mode, and if it is zero or negative, disable
+the mode.
+
+If called from Lisp, toggle the mode if ARG is `toggle'.  Enable
+the mode if ARG is nil, omitted, or is a positive number.
+Disable the mode if ARG is a negative number.
+
+To check whether the minor mode is enabled in the current buffer,
+evaluate `quickrun-autorun-mode'.
+
+The mode's hook is called both when the mode is enabled and when
+it is disabled.
+
+(fn &optional ARG)" t) (autoload 'anything-quickrun "quickrun" "Run quickrun with `anything'." t) (autoload 'helm-quickrun "quickrun" "Run quickrun with `helm'." t) (register-definition-prefixes "quickrun" '("helm-quickrun-" "quick")) (provide 'quickrun-autoloads))))
+
+#s(hash-table size 65 test eq rehash-size 1.5 rehash-threshold 0.8125 data (org-elpa #s(hash-table size 145 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 15 "melpa" nil "gnu-elpa-mirror" nil "nongnu-elpa" nil "el-get" nil "emacsmirror-mirror" nil "straight" nil "use-package" nil "bind-key" nil "bug-hunter" nil "seq" nil "cl-lib" nil "all-the-icons" nil "nerd-icons" nil "adwaita-dark-theme" nil "dashboard" nil "mood-line" nil "hydra" nil "lv" nil "flycheck" nil "flycheck-inline" nil "company" nil "yasnippet" nil "lsp-mode" nil "dash" nil "f" nil "s" nil "ht" nil "spinner" nil "markdown-mode" nil "eldoc" nil "sly" nil "lsp-java" nil "request" nil "treemacs" nil "ace-window" nil "avy" nil "pfuture" nil "cfrs" nil "posframe" nil "dap-mode" nil "bui" nil "lsp-treemacs" nil "lsp-docker" nil "yaml" nil "typescript-mode" nil "lsp-ui" nil "lsp-ivy" nil "ivy" nil "which-key" nil "magit" nil "compat" nil "magit-section" nil "transient" nil "with-editor" nil "multiple-cursors" nil "pdf-tools" nil "tablist" nil "let-alist" nil "rainbow-delimiters" nil "projectile" nil "neotree" nil "helpful" nil "elisp-refs" nil "counsel" nil "swiper" nil "smex" nil "all-the-icons-ivy-rich" nil "ivy-rich" nil "peep-dired" nil "ivy-xref" nil "centaur-tabs" nil "powerline" nil "org" (org :type git :repo "https://git.savannah.gnu.org/git/emacs/org-mode.git" :local-repo "org" :depth full :pre-build (straight-recipes-org-elpa--build) :build (:not autoloads) :files (:defaults "lisp/*.el" ("etc/styles/" "etc/styles/*"))) "org-superstar" nil "toc-org" nil "all-the-icons-dired" nil "nerd-icons-dired" nil "company-box" nil "frame-local" nil "lsp-pyright" nil "vterm" nil "vterm-toggle" nil "org-roam" nil "emacsql" nil "company-coq" nil "company-math" nil "math-symbol-lists" nil "pyenv-mode" nil "pythonic" nil "move-text" nil "pyenv" nil "pipenv" nil "pyvenv" nil "load-env-vars" nil "pyimport" nil "shut-up" nil "treesit-auto" nil "dap-java" nil "quickrun" nil)) melpa #s(hash-table size 145 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "gnu-elpa-mirror" nil "nongnu-elpa" nil "el-get" (el-get :type git :flavor melpa :files (:defaults "methods" ("recipes" "recipes/el-get.rcp") "el-get-pkg.el") :host github :repo "dimitri/el-get") "emacsmirror-mirror" nil "straight" nil "use-package" (use-package :type git :flavor melpa :files (:defaults (:exclude "bind-key.el" "bind-chord.el" "use-package-chords.el" "use-package-ensure-system-package.el") "use-package-pkg.el") :host github :repo "jwiegley/use-package") "bind-key" (bind-key :type git :flavor melpa :files ("bind-key.el" "bind-key-pkg.el") :host github :repo "jwiegley/use-package") "bug-hunter" nil "seq" nil "cl-lib" nil "all-the-icons" (all-the-icons :type git :flavor melpa :files (:defaults "data" "all-the-icons-pkg.el") :host github :repo "domtronn/all-the-icons.el") "nerd-icons" (nerd-icons :type git :flavor melpa :files (:defaults "data" "nerd-icons-pkg.el") :host github :repo "rainstormstudio/nerd-icons.el") "adwaita-dark-theme" (adwaita-dark-theme :type git :flavor melpa :host gitlab :repo "jessieh/adwaita-dark-theme") "dashboard" (dashboard :type git :flavor melpa :files (:defaults "banners" "dashboard-pkg.el") :host github :repo "emacs-dashboard/emacs-dashboard") "mood-line" (mood-line :type git :flavor melpa :host gitlab :repo "jessieh/mood-line") "hydra" (hydra :type git :flavor melpa :files (:defaults (:exclude "lv.el") "hydra-pkg.el") :host github :repo "abo-abo/hydra") "lv" (lv :type git :flavor melpa :files ("lv.el" "lv-pkg.el") :host github :repo "abo-abo/hydra") "flycheck" (flycheck :type git :flavor melpa :host github :repo "flycheck/flycheck") "flycheck-inline" (flycheck-inline :type git :flavor melpa :host github :repo "flycheck/flycheck-inline") "company" (company :type git :flavor melpa :files (:defaults "icons" ("images/small" "doc/images/small/*.png") "company-pkg.el") :host github :repo "company-mode/company-mode") "yasnippet" (yasnippet :type git :flavor melpa :files ("yasnippet.el" "snippets" "yasnippet-pkg.el") :host github :repo "joaotavora/yasnippet") "lsp-mode" (lsp-mode :type git :flavor melpa :files (:defaults "clients/*.el" "lsp-mode-pkg.el") :host github :repo "emacs-lsp/lsp-mode") "dash" (dash :type git :flavor melpa :files ("dash.el" "dash.texi" "dash-pkg.el") :host github :repo "magnars/dash.el") "f" (f :type git :flavor melpa :host github :repo "rejeep/f.el") "s" (s :type git :flavor melpa :host github :repo "magnars/s.el") "ht" (ht :type git :flavor melpa :host github :repo "Wilfred/ht.el") "spinner" nil "markdown-mode" (markdown-mode :type git :flavor melpa :host github :repo "jrblevin/markdown-mode") "eldoc" nil "sly" (sly :type git :flavor melpa :files (:defaults "lib" "slynk" "contrib" "doc/images" (:exclude "sly-autoloads.el") "sly-pkg.el") :host github :repo "joaotavora/sly") "lsp-java" (lsp-java :type git :flavor melpa :files (:defaults "icons" "lsp-java-pkg.el") :host github :repo "emacs-lsp/lsp-java") "request" (request :type git :flavor melpa :files ("request.el" "request-pkg.el") :host github :repo "tkf/emacs-request") "treemacs" (treemacs :type git :flavor melpa :files (:defaults "Changelog.org" "icons" "src/elisp/treemacs*.el" "src/scripts/treemacs*.py" (:exclude "src/extra/*") "treemacs-pkg.el") :host github :repo "Alexander-Miller/treemacs") "ace-window" (ace-window :type git :flavor melpa :host github :repo "abo-abo/ace-window") "avy" (avy :type git :flavor melpa :host github :repo "abo-abo/avy") "pfuture" (pfuture :type git :flavor melpa :host github :repo "Alexander-Miller/pfuture") "cfrs" (cfrs :type git :flavor melpa :host github :repo "Alexander-Miller/cfrs") "posframe" (posframe :type git :flavor melpa :host github :repo "tumashu/posframe") "dap-mode" (dap-mode :type git :flavor melpa :files (:defaults "icons" "dap-mode-pkg.el") :host github :repo "emacs-lsp/dap-mode") "bui" (bui :type git :flavor melpa :host github :repo "alezost/bui.el") "lsp-treemacs" (lsp-treemacs :type git :flavor melpa :files (:defaults "icons" "lsp-treemacs-pkg.el") :host github :repo "emacs-lsp/lsp-treemacs") "lsp-docker" (lsp-docker :type git :flavor melpa :host github :repo "emacs-lsp/lsp-docker") "yaml" (yaml :type git :flavor melpa :host github :repo "zkry/yaml.el") "typescript-mode" (typescript-mode :type git :flavor melpa :host github :repo "emacs-typescript/typescript.el") "lsp-ui" (lsp-ui :type git :flavor melpa :files (:defaults "lsp-ui-doc.html" "resources" "lsp-ui-pkg.el") :host github :repo "emacs-lsp/lsp-ui") "lsp-ivy" (lsp-ivy :type git :flavor melpa :host github :repo "emacs-lsp/lsp-ivy") "ivy" (ivy :type git :flavor melpa :files (:defaults "doc/ivy-help.org" (:exclude "swiper.el" "counsel.el" "ivy-hydra.el" "ivy-avy.el") "ivy-pkg.el") :host github :repo "abo-abo/swiper") "which-key" (which-key :type git :flavor melpa :host github :repo "justbur/emacs-which-key") "magit" (magit :type git :flavor melpa :files ("lisp/magit*.el" "lisp/git-*.el" "docs/magit.texi" "docs/AUTHORS.md" "LICENSE" "magit-pkg.el" (:exclude "lisp/magit-section.el") "magit-pkg.el") :host github :repo "magit/magit") "compat" nil "magit-section" (magit-section :type git :flavor melpa :files ("lisp/magit-section.el" "docs/magit-section.texi" "magit-section-pkg.el" "magit-section-pkg.el") :host github :repo "magit/magit") "transient" (transient :type git :flavor melpa :host github :repo "magit/transient") "with-editor" (with-editor :type git :flavor melpa :host github :repo "magit/with-editor") "multiple-cursors" (multiple-cursors :type git :flavor melpa :host github :repo "magnars/multiple-cursors.el") "pdf-tools" (pdf-tools :type git :flavor melpa :files (:defaults "README" ("build" "Makefile") ("build" "server") "pdf-tools-pkg.el") :host github :repo "vedang/pdf-tools") "tablist" (tablist :type git :flavor melpa :host github :repo "emacsorphanage/tablist") "let-alist" nil "rainbow-delimiters" (rainbow-delimiters :type git :flavor melpa :host github :repo "Fanael/rainbow-delimiters") "projectile" (projectile :type git :flavor melpa :host github :repo "bbatsov/projectile") "neotree" (neotree :type git :flavor melpa :files (:defaults "icons" "neotree-pkg.el") :host github :repo "jaypei/emacs-neotree") "helpful" (helpful :type git :flavor melpa :host github :repo "Wilfred/helpful") "elisp-refs" (elisp-refs :type git :flavor melpa :files (:defaults (:exclude "elisp-refs-bench.el") "elisp-refs-pkg.el") :host github :repo "Wilfred/elisp-refs") "counsel" (counsel :type git :flavor melpa :files ("counsel.el" "counsel-pkg.el") :host github :repo "abo-abo/swiper") "swiper" (swiper :type git :flavor melpa :files ("swiper.el" "swiper-pkg.el") :host github :repo "abo-abo/swiper") "smex" (smex :type git :flavor melpa :host github :repo "nonsequitur/smex") "all-the-icons-ivy-rich" (all-the-icons-ivy-rich :type git :flavor melpa :host github :repo "seagle0128/all-the-icons-ivy-rich") "ivy-rich" (ivy-rich :type git :flavor melpa :host github :repo "Yevgnen/ivy-rich") "peep-dired" (peep-dired :type git :flavor melpa :host github :repo "asok/peep-dired") "ivy-xref" (ivy-xref :type git :flavor melpa :host github :repo "alexmurray/ivy-xref") "centaur-tabs" (centaur-tabs :type git :flavor melpa :host github :repo "ema2159/centaur-tabs") "powerline" (powerline :type git :flavor melpa :host github :repo "milkypostman/powerline") "org-superstar" (org-superstar :type git :flavor melpa :host github :repo "integral-dw/org-superstar-mode") "toc-org" (toc-org :type git :flavor melpa :host github :repo "snosov1/toc-org") "all-the-icons-dired" (all-the-icons-dired :type git :flavor melpa :host github :repo "wyuenho/all-the-icons-dired") "nerd-icons-dired" (nerd-icons-dired :type git :flavor melpa :host github :repo "rainstormstudio/nerd-icons-dired") "company-box" (company-box :type git :flavor melpa :files (:defaults "images" "company-box-pkg.el") :host github :repo "sebastiencs/company-box") "frame-local" (frame-local :type git :flavor melpa :host github :repo "sebastiencs/frame-local") "lsp-pyright" (lsp-pyright :type git :flavor melpa :host github :repo "emacs-lsp/lsp-pyright") "vterm" (vterm :type git :flavor melpa :files ("CMakeLists.txt" "elisp.c" "elisp.h" "emacs-module.h" "etc" "utf8.c" "utf8.h" "vterm.el" "vterm-module.c" "vterm-module.h" "vterm-pkg.el") :host github :repo "akermu/emacs-libvterm") "vterm-toggle" (vterm-toggle :type git :flavor melpa :host github :repo "jixiuf/vterm-toggle") "org-roam" (org-roam :type git :flavor melpa :files (:defaults "extensions/*" "org-roam-pkg.el") :host github :repo "org-roam/org-roam") "emacsql" (emacsql :type git :flavor melpa :files (:defaults "README.md" "sqlite" "emacsql-pkg.el") :host github :repo "magit/emacsql") "company-coq" (company-coq :type git :flavor melpa :files (:defaults "refman" "company-coq-pkg.el") :host github :repo "cpitclaudel/company-coq") "company-math" (company-math :type git :flavor melpa :host github :repo "vspinu/company-math") "math-symbol-lists" (math-symbol-lists :type git :flavor melpa :host github :repo "vspinu/math-symbol-lists") "pyenv-mode" (pyenv-mode :type git :flavor melpa :host github :repo "pythonic-emacs/pyenv-mode") "pythonic" (pythonic :type git :flavor melpa :host github :repo "pythonic-emacs/pythonic") "move-text" (move-text :type git :flavor melpa :host github :repo "emacsfodder/move-text") "pyenv" nil "pipenv" (pipenv :type git :flavor melpa :host github :repo "pwalsh/pipenv.el") "pyvenv" (pyvenv :type git :flavor melpa :host github :repo "jorgenschaefer/pyvenv") "load-env-vars" (load-env-vars :type git :flavor melpa :host github :repo "diasjorge/emacs-load-env-vars") "pyimport" (pyimport :type git :flavor melpa :host github :repo "Wilfred/pyimport") "shut-up" (shut-up :type git :flavor melpa :host github :repo "cask/shut-up") "treesit-auto" (treesit-auto :type git :flavor melpa :host github :repo "renzmann/treesit-auto") "dap-java" nil "quickrun" (quickrun :type git :flavor melpa :host github :repo "emacsorphanage/quickrun"))) gnu-elpa-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 3 "nongnu-elpa" nil "emacsmirror-mirror" nil "straight" nil "bug-hunter" (bug-hunter :type git :host github :repo "emacs-straight/bug-hunter" :files ("*" (:exclude ".git"))) "seq" (seq :type git :host github :repo "emacs-straight/seq" :files ("*" (:exclude ".git"))) "cl-lib" nil "spinner" (spinner :type git :host github :repo "emacs-straight/spinner" :files ("*" (:exclude ".git"))) "eldoc" (eldoc :type git :host github :repo "emacs-straight/eldoc" :files ("*" (:exclude ".git"))) "compat" (compat :type git :host github :repo "emacs-straight/compat" :files ("*" (:exclude ".git"))) "let-alist" (let-alist :type git :host github :repo "emacs-straight/let-alist" :files ("*" (:exclude ".git"))) "pyenv" nil "dap-java" nil)) nongnu-elpa #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 4 "emacsmirror-mirror" nil "straight" nil "cl-lib" nil "pyenv" nil "dap-java" nil)) el-get #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "emacsmirror-mirror" nil "straight" nil "cl-lib" nil "pyenv" `(pyenv :type git :host github :repo "shellbj/pyenv.el" :files (:defaults)) "dap-java" nil)) emacsmirror-mirror #s(hash-table size 65 test equal rehash-size 1.5 rehash-threshold 0.8125 data (version 2 "straight" (straight :type git :host github :repo "emacsmirror/straight") "cl-lib" nil "dap-java" nil))))
+
+("emacsql" "org-roam" "toc-org" "org-superstar" "org" "powerline" "centaur-tabs" "peep-dired" "nerd-icons-dired" "ivy-rich" "all-the-icons-ivy-rich" "smex" "swiper" "counsel" "elisp-refs" "helpful" "neotree" "projectile" "rainbow-delimiters" "let-alist" "tablist" "pdf-tools" "multiple-cursors" "with-editor" "transient" "magit-section" "compat" "magit" "vterm-toggle" "vterm" "which-key" "ivy" "lsp-ivy" "lsp-ui" "typescript-mode" "lsp-pyright" "quickrun" "yaml" "lsp-docker" "lsp-treemacs" "bui" "dap-mode" "posframe" "cfrs" "pfuture" "avy" "ace-window" "treemacs" "request" "lsp-java" "sly" "math-symbol-lists" "company-math" "company-coq" "eldoc" "markdown-mode" "spinner" "ht" "s" "f" "dash" "lsp-mode" "yasnippet" "company" "flycheck-inline" "flycheck" "move-text" "lv" "hydra" "mood-line" "dashboard" "adwaita-dark-theme" "nerd-icons" "all-the-icons" "cl-lib" "seq" "bug-hunter" "bind-key" "use-package" "emacs" "straight" "emacsmirror-mirror" "el-get" "nongnu-elpa" "gnu-elpa-mirror" "melpa" "org-elpa")
 
 t

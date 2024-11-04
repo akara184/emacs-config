@@ -2,6 +2,9 @@
 ;; Disabling package.el
 (setq package-enable-at-startup nil)
 ;;===============================================================
+;; Disable useless WARNING
+(setq warning-minimum-level :emergency)
+;;===============================================================
 ;; Package Configuration
 (defvar bootstrap-version)
 (let ((bootstrap-file
@@ -52,6 +55,8 @@
 (recentf-mode 1)                            ;; Enable recent files
 (setq make-backup-files nil)                ;; dont make backup file
 
+
+
 ;; Show line numbers except in org-mode
 (global-display-line-numbers-mode t)
 (dolist (mode '(org-mode-hook))
@@ -63,7 +68,7 @@
 (use-package adwaita-dark-theme)        ;; adwaita theme
 (load-theme 'adwaita-dark t)            ;; Load theme
 
-(add-to-list 'default-frame-alist '(alpha-background . 99)) ;; For all frame Transparency
+;; (add-to-list 'default-frame-alist '(alpha-background . 99)) ;; For all frame Transparency
 
 ;;Dashboard configuration
 (use-package dashboard
@@ -107,6 +112,15 @@
       (end-of-line)
       (set-mark (line-beginning-position)))))
 
+;;To move text up and down
+(use-package move-text
+  :ensure t
+  :config
+  (progn
+    (global-set-key (kbd "C-<up>") 'move-text-up)
+    (global-set-key (kbd "C-<down>") 'move-text-down)))
+
+;; Ivy
 ;; Unbind and rebind keys
 (global-unset-key (kbd "C-q"))                                        ;; Unbind C-q
 (global-set-key (kbd "C-q C-r") 'restart-emacs)                       ;; Restart emacs
@@ -130,10 +144,18 @@
 (use-package flycheck
   :init  (global-flycheck-mode)
   :custom
-  (setq flycheck-standard-error-navigation t))
+  (setq flycheck-standard-error-navigation t
+	flycheck-idle-change-delay 5.0
+	flycheck-display-errors-delay 0.9
+	flycheck-highlighting-mode 'symbols
+	flycheck-indication-mode 'left-fringe
+	flycheck-standard-error-navigation t
+	flycheck-deferred-syntax-check nil))
 
 (use-package flycheck-inline
-  :hook (flycheck-mode . flycheck-inline-mode))
+  :hook
+  (flycheck-mode . flycheck-inline-mode))
+;;  :hook (flycheck-mode . flycheck-inline-mode)
 
 ;; Company-mode for autocompletion
 (use-package company
@@ -154,15 +176,38 @@
 ;; LSP for multiple languages
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
-  :init (setq lsp-keymap-prefix "C-c l"))
+  :init (setq lsp-keymap-prefix "C-c l")
+  :hook
+  (lsp-mode . lsp-enable-which-key))
+
+;;coq
+(use-package company-coq
+  :hook
+  (coq-mode-hook . company-coq-mode))
 
 ;; SLY for Common Lisp
 (use-package sly)
 
 ;; LSP for Java
 (use-package lsp-java
-  :config (add-hook 'java-mode-hook 'lsp))
+  :config (add-hook 'java-mode-hook 'lsp)
+  :hook (java-mode . yas-minor-mode))
 
+(use-package dap-mode
+  :after lsp-mod
+  :config (dap-auto-configure-mode))
+
+(use-package quickrun)
+
+;; Lsp tree
+(use-package lsp-treemacs)
+
+;; LSP for Python
+(use-package lsp-pyright
+  :ensure t
+  :hook (python-mode . (lambda ()
+                          (require 'lsp-pyright)
+                          (lsp))))  ; or lsp-deferred
 
 ;; TypeScript support with LSP
 (use-package typescript-mode
@@ -172,11 +217,17 @@
 
 ;; UI enhancements for LSP
 (use-package lsp-ui
-  :hook (lsp-mode . lsp-ui-mode)
-  :config (setq lsp-ui-doc-mode 1))
+  :ensure t
+  :hook ((lsp-mode . lsp-ui-mode)
+	 (lsp-mode . lsp-completion-mode-maybe))
+  :after lsp-mode
+  :config
+  (setq lsp-ui-doc-mode 1))
 
 (use-package lsp-ivy)
-(use-package lsp-treemacs)
+
+;;===============================================================
+;; Additional Tools
 
 ;; Keybinding helper
 (use-package which-key
@@ -184,8 +235,25 @@
   :diminish which-key-mode
   :config (setq which-key-idle-delay 0.3))
 
-;;===============================================================
-;; Additional Tools
+;; Terminal
+(use-package vterm)
+(use-package vterm-toggle
+  :bind ("C-c t" . 'vterm-toggle)
+  :config
+  (setq vterm-toggle-fullscreen-p nil)
+  (add-to-list 'display-buffer-alist
+               '((lambda (buffer-or-name _)
+                   (let ((buffer (get-buffer buffer-or-name)))
+                     (with-current-buffer buffer
+                       (or (equal major-mode 'vterm-mode)
+                           (string-prefix-p vterm-buffer-name (buffer-name buffer))))))
+                 (display-buffer-reuse-window display-buffer-at-bottom)
+                 ;;(display-buffer-reuse-window display-buffer-in-direction)
+                 ;;display-buffer-in-direction/direction/dedicated is added in emacs27
+                 ;;(direction . bottom)
+                 ;;(dedicated . t) ;dedicated is supported in emacs27
+                 (reusable-frames . visible)
+                 (window-height . 0.3))))
 
 ;; Magit for GIT
 (use-package magit)
@@ -233,7 +301,7 @@
    ("C-h v" . helpful-variable)
    ("C-h k" . helpful-key)
    ("C-h x" . helpful-command)
-   ("C-c C-d" . helpful-at-point)))
+   ("C-c d" . helpful-at-point)))
 
 ;; Ivy for better minibuffer completion
 ;; Ivy configuration
@@ -281,23 +349,14 @@
   :after ivy
   :init (ivy-rich-mode 1))
 
+;; Icons in dired-mode 
+(use-package nerd-icons-dired
+  :hook (dired-mode . (lambda () (nerd-icons-dired-mode t))))
 
 ;; Use this to preview in dired
 (use-package peep-dired
   :after dired
   :config (setq peep-dired-cleanup-on-disable t))
-
-;;IDK
-(use-package ivy-xref
-  :init
-  ;; xref initialization is different in Emacs 27 - there are two different
-  ;; variables which can be set rather than just one
-  (when (>= emacs-major-version 27)
-    (setq xref-show-definitions-function #'ivy-xref-show-defs))
-  ;; Necessary in Emacs <27. In Emacs 27 it will affect all xref-based
-  ;; commands other than xref-find-definitions (e.g. project-find-regexp)
-  ;; as well
-  (setq xref-show-xrefs-function #'ivy-xref-show-xrefs))
 
 ;; Tabs in emacs 
 (use-package centaur-tabs
@@ -315,7 +374,8 @@
   ("C-x <prior>" . centaur-tabs-backward)
   ("C-x <next>" . centaur-tabs-forward)
   :hook
-  (dashboard-mode . centaur-tabs-local-mode))
+  (dashboard-mode . centaur-tabs-local-mode)
+  (vterm-mode . centaur-tabs-local-mode))
 
 ;;===============================================================
 ;; Org Mode and Enhancements
@@ -339,3 +399,21 @@
 
 ;; TOC support in org-mode
 (use-package toc-org)
+
+;; ORG-ROAM unicorn 
+(use-package org-roam
+  :custom
+  (org-roam-directory (file-truename "~/RoamNotes"))
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n g" . org-roam-graph)
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n c" . org-roam-capture)
+         ;; Dailies
+         ("C-c n j" . org-roam-dailies-capture-today))
+  :config
+  ;; If you're using a vertical completion framework, you might want a more informative completion interface
+  (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
+  (org-roam-db-autosync-mode)
+  ;; If using org-roam-protocol
+  (require 'org-roam-protocol))

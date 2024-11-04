@@ -9,4 +9,6 @@
 
 (setq mc/cmds-to-run-once
       '(
+	mouse-set-region
+	previous-buffer
 	))

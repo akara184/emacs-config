@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/diversao.java</name>
+			<type>1</type>
+			<location>//home/akara184/diversao/java/diversao.java</location>
+		</link>
+	</linkedResources>
 </projectDescription>

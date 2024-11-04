@@ -16,3 +16,4 @@ org.eclipse.jdt.core.compiler.source=17
 org.eclipse.jdt.core.formatter.indent_switchstatements_compare_to_switch=true
 org.eclipse.jdt.core.formatter.join_lines_in_comments=false
 org.eclipse.jdt.core.formatter.join_wrapped_lines=false
+org.eclipse.jdt.core.formatter.tabulation.char=space

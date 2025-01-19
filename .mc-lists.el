@@ -5,6 +5,7 @@
       '(
 	counsel-M-x
 	keyboard-escape-quit
+	select-line
 	))
 
 (setq mc/cmds-to-run-once

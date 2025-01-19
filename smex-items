@@ -1,19 +1,19 @@
 
 ;; ----- smex-history -----
 (
- kill-ring-save
- quickrun-shell
- lsp-mode
- quickrun-eval-print
- quickrun--mode
- lsp
- quickrun
+ theme-choose-variant
+ python-mode
+ python-sort-imports
+ python-add-import
+ python-fix-imports
+ package-install
+ pyvenv-activate
 )
 
 ;; ----- smex-data -----
 (
  (smex . 3)
- (package-install . 11)
+ (package-install . 14)
  (smex-where-is . 1)
  (smex-save-to-file . 1)
  (app-launcher-run-app . 5)
@@ -34,9 +34,9 @@
  (counsel-recentf . 2)
  (minions-mode . 4)
  (sly . 5)
- (lsp-mode . 19)
- (lsp-install-server . 8)
- (lsp . 5)
+ (lsp-mode . 27)
+ (lsp-install-server . 10)
+ (lsp . 7)
  (run-lisp . 1)
  (mood-line-mode . 2)
  (load-theme . 5)
@@ -73,7 +73,7 @@
  (straight-pull-all . 5)
  (magit-commit . 1)
  (straight-pull-package-and-deps . 1)
- (theme-choose-variant . 1)
+ (theme-choose-variant . 2)
  (bug-reference-mode . 1)
  (bug-hunter-init-file . 1)
  (elpaca-update . 2)
@@ -117,8 +117,8 @@
  (org-roam-graph . 1)
  (org-roam-capture . 1)
  (flycheck-inline-mode . 3)
- (python-fix-imports . 8)
- (python-add-import . 1)
+ (python-fix-imports . 18)
+ (python-add-import . 2)
  (python-skeleton-import . 2)
  (pyenv-mode . 7)
  (pyenv-mode-set . 7)
@@ -136,7 +136,7 @@
  (pipenv-venv . 1)
  (pipenv-graph . 1)
  (pipenv-help . 1)
- (pyimport-insert-missing . 1)
+ (pyimport-insert-missing . 6)
  (treesit-auto-mode . 1)
  (treesit-check-indent . 3)
  (treesit-end-of-defun . 1)
@@ -146,7 +146,7 @@
  (indent-relative . 1)
  (indent-rigidly-right . 1)
  (lsp-diagnostics-mode . 1)
- (python-eldoc-at-point . 1)
+ (python-eldoc-at-point . 2)
  (snippet-mode . 2)
  (yas-minor-mode . 1)
  (yas-expand . 1)
@@ -162,4 +162,25 @@
  (quickrun--mode . 1)
  (quickrun-eval-print . 1)
  (kill-ring-save . 1)
+ (dictionary . 1)
+ (define-abbrevs . 1)
+ (lsp-describe-thing-at-point . 1)
+ (lsp-ui-imenu . 3)
+ (lsp-ui-mode . 1)
+ (lsp-ui-doc-show . 4)
+ (lsp-ui-doc-toggle . 2)
+ (lsp-ui-doc-glance . 1)
+ (lsp-ui-doc-focus-frame . 1)
+ (lsp-ui-doc-frame-mode . 1)
+ (read-only-mode . 1)
+ (pyvenv-create . 1)
+ (describe-key . 1)
+ (pyvenv-activate . 9)
+ (pyvenv-workon . 3)
+ (pyvenv-mode . 1)
+ (pyvenv-tracking-mode . 1)
+ (pyvenv-menu . 1)
+ (run-python . 1)
+ (python-mode . 5)
+ (python-sort-imports . 1)
 )

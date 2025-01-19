@@ -66,6 +66,7 @@
 (use-package all-the-icons)             ;; Load icons
 (use-package nerd-icons)                ;; Load icons
 (use-package adwaita-dark-theme)        ;; adwaita theme
+
 (load-theme 'adwaita-dark t)            ;; Load theme
 
 ;; (add-to-list 'default-frame-alist '(alpha-background . 99)) ;; For all frame Transparency
@@ -176,9 +177,7 @@
 ;; LSP for multiple languages
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
-  :init (setq lsp-keymap-prefix "C-c l")
-  :hook
-  (lsp-mode . lsp-enable-which-key))
+  :init (setq lsp-keymap-prefix "C-c l"))
 
 ;;coq
 (use-package company-coq
@@ -202,12 +201,20 @@
 ;; Lsp tree
 (use-package lsp-treemacs)
 
+
+
+
 ;; LSP for Python
 (use-package lsp-pyright
   :ensure t
   :hook (python-mode . (lambda ()
                           (require 'lsp-pyright)
                           (lsp))))  ; or lsp-deferred
+
+;; Pyvenv
+(use-package pyvenv
+  :after lsp-pyright) 
+
 
 ;; TypeScript support with LSP
 (use-package typescript-mode
@@ -218,8 +225,7 @@
 ;; UI enhancements for LSP
 (use-package lsp-ui
   :ensure t
-  :hook ((lsp-mode . lsp-ui-mode)
-	 (lsp-mode . lsp-completion-mode-maybe))
+  :hook ((lsp-mode . lsp-ui-mode))
   :after lsp-mode
   :config
   (setq lsp-ui-doc-mode 1))
@@ -262,11 +268,9 @@
 (use-package multiple-cursors
   :bind (("C-M-j"   . mc/mark-all-dwim)
          ("C-M-c"   . mc/edit-lines)
-         ("C-M-l"   . er/expand-region)
-         ("C-M-/"   . mc/mark-all-like-this)
-         ("C-M-."   . mc/mark-next-like-this)
+         ("C-M-l"   . er/expand-region)         ("C-M-/"   . mc/mark-all-like-this)         ("C-M-."   . mc/mark-next-like-thi)
          ("C-M-,"   . mc/mark-previous-like-this)
-	 ("C-M-<"   . mc/skip-to-previous-like-this)
+	 ("C-M-<"   . mc/skip-to-previous-lik-this)
 	 ("C-M->"   . mc/skip-to-next-like-this)))
 
 ;; To read PDF
@@ -400,7 +404,7 @@
 ;; TOC support in org-mode
 (use-package toc-org)
 
-;; ORG-ROAM unicorn 
+;;ORG-ROAM unicorn 
 (use-package org-roam
   :custom
   (org-roam-directory (file-truename "~/RoamNotes"))

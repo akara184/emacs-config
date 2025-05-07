@@ -1,0 +1,57 @@
+
+;; ----- smex-history -----
+(
+ lsp
+ lsp-organize-imports
+ helpful-variable
+ lsp-java-organize-imports
+ lsp-java-add-import
+ indent-tabs-mode
+ describe-command
+)
+
+;; ----- smex-data -----
+(
+ (all-the-icons-install-fonts . 1)
+ (nerd-icons-install-fonts . 1)
+ (describe-key . 2)
+ (dashboard-open . 2)
+ (read-only-mode . 2)
+ (lsp . 27)
+ (java-ts-mode . 1)
+ (java-mode . 2)
+ (lsp-ui-imenu . 1)
+ (open-rectangle . 1)
+ (yas-new-snippet . 1)
+ (yas-insert-snippet . 1)
+ (lsp-java-organize-imports . 10)
+ (lsp-java-add-import . 5)
+ (lsp-ui-mode . 1)
+ (lsp-goto-type-definition . 2)
+ (lsp-java-update-server . 1)
+ (snippet-mode . 4)
+ (lsp-organize-imports . 13)
+ (electric-pair-mode . 2)
+ (lsp-goto-implementation . 6)
+ (indent-tabs-mode . 5)
+ (lsp-java-generate-to-string . 4)
+ (lsp-java-generate-overrides . 1)
+ (project-dired . 1)
+ (projectile-mode . 6)
+ (projectile-commander . 4)
+ (projectile-discover-projects-in-directory . 10)
+ (project-find-file . 1)
+ (dired . 1)
+ (package-recompile . 1)
+ (package-upgrade . 1)
+ (package-upgrade-all . 1)
+ (straight-pull-all . 1)
+ (straight-check-all . 1)
+ (backward-word . 1)
+ (emacs-uptime . 1)
+ (centaur-tabs--create-new-empty-buffer . 1)
+ (list-buffers . 1)
+ (describe-function . 1)
+ (describe-command . 1)
+ (helpful-variable . 1)
+)

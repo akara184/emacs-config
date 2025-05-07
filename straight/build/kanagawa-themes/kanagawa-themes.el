@@ -1,0 +1,1 @@
+/home/akara184/.emacs.d/straight/repos/kanagawa-emacs/kanagawa-themes.el

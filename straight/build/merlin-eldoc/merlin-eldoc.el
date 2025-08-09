@@ -1,0 +1,1 @@
+/home/akara184/.emacs.d/straight/repos/merlin-eldoc/merlin-eldoc.el

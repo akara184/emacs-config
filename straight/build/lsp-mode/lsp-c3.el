@@ -1,0 +1,1 @@
+/home/akara184/.emacs.d/straight/repos/lsp-mode/clients/lsp-c3.el

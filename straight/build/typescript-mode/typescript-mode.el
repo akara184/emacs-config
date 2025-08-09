@@ -1,0 +1,1 @@
+/home/akara184/.emacs.d/straight/repos/typescript.el/typescript-mode.el

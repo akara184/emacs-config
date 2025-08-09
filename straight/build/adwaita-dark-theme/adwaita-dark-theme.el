@@ -1,0 +1,1 @@
+/home/akara184/.emacs.d/straight/repos/adwaita-dark-theme/adwaita-dark-theme.el

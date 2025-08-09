@@ -1,0 +1,1 @@
+/home/akara184/.emacs.d/straight/repos/bug-hunter/.github/PULL_REQUEST_TEMPLATE.md

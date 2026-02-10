@@ -1,11 +1,21 @@
-;;===============================================================s
+;;(add-to-list 'load-path "~/.emacs.d/")
+;;(require '(gcmh-mode 1)
+
+;; config package is customize-group // reminder
 ;; Disabling package.el
 (setq package-enable-at-startup nil)
 ;;===============================================================
 ;; Disable useless WARNING
 (setq warning-minimum-level :emergency)
 ;;===============================================================
-;; Package Configuration
+
+;; Backup dir
+(setq backup-directory-alist `(("." . "~/.emacs.d/backups")))
+(setq auto-save-file-name-transforms `((".*" "~/.emacs.d/auto-saves/" t)))
+(setq create-lockfiles nil)
+
+
+;;; Package Configuration
 (defvar bootstrap-version)
 (let ((bootstrap-file
        (expand-file-name
@@ -26,11 +36,38 @@
 
 (setq straight-use-package-by-default t) ;; Make sure it all t
 
+
+
+
+
+;;To user $PATH configs
+(use-package exec-path-from-shell)
+
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
+
+
+
+
 ;; Automatically debug and bisect your init (.emacs) file!
 (use-package bug-hunter)
 
+
+
+
+
+
 ;;===============================================================
-;; Emacs init file configurations
+;;; Emacs init file configurations
+
+
+
+
+
+
+
 
 ;; Helper function to open the init file
 (defun my-open-init-file ()
@@ -38,11 +75,17 @@
   (interactive)
   (find-file user-init-file))
 
+
+
 ;; Keybinding to quickly open the init file
 (global-set-key (kbd "C-x C-.") 'my-open-init-file)
 
 ;;===============================================================
-;; UI & Theme Configurations
+;;; UI & Theme Configurations
+
+
+
+
 
 (setq inhibit-startup-message t)            ;; Disable startup message
 (menu-bar-mode -1)                          ;; Disable menu bar
@@ -57,57 +100,112 @@
 
 
 
+
+
 ;; Show line numbers except in org-mode
 (global-display-line-numbers-mode t)
 (dolist (mode '(org-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
+
+
+
+
 ;; Load theme and icons
 (use-package all-the-icons)             ;; Load icons
 (use-package nerd-icons)                ;; Load icons
-(use-package adwaita-dark-theme)        ;; adwaita theme
-
-(load-theme 'adwaita-dark t) ;; Load theme
 
 
-;; cool white theme 
-;; (use-package solo-jazz-theme 
+
+;; (straight-use-package
+;;   ( :type git :repo "https://github.com/"))
+
+
+
+
+;;(load-theme 'everforest-hard-dark t)
+
+
+
+(use-package gruvbox-theme
+  :ensure t
+  :config
+  (load-theme 'gruvbox-dark-hard  t))
+
+
+
+
+
+;; --------------
+;; Good themes
+
+
+;; (straight-use-package
+;;  '(everforest-emacs
+;;    :type git
+;;    :host github
+;;    :repo "Theory-of-Everything/everforest-emacs"))
+;; (load-theme 'everforest-hard-dark t)
+
+
+;; (use-package kanagawa-themes
+;;   :ensure t
+;;   :config
+;;   (load-theme 'kanagawa-wave t))
+
+;; (use-package  srcery-theme
+;;   :config
+;;   (load-theme 'srcery t))
+
+;;(use-package adwaita-dark-theme)        ;; adwaita theme
+;;(load-theme 'adwaita-dark t) ;; Load theme
+
+;; cool white theme
+;; (use-package solo-jazz-theme
 ;;   :ensure t
 ;;   :config
 ;;   (load-theme 'solo-jazz t))
 
-;; (add-to-list 'default-frame-alist '(alpha-background . 99)) ;; For all frame Transparency
+;; (add-to-list 'default-frame-alist '(alpha-background . 20)) ;; For all frame Transparency
 
-;;Dashboard configuration
-(use-package dashboard
-  :init
-  :config  (setq dashboard-items '((recents . 5)
-			  (projects . 10))
-	dashboard-startup-banner 'logo
-	dashboard-set-file-icons t
-	dashboard-icon-type 'nerd-icons
-	dashboard-heading-icons t
-	dashboard-projects-backend 'projectile)
 
-  (dashboard-setup-startup-hook)
-  (setq dashboard-startup-banner "~/.emacs.d/images/vasco1.png"))
+;; --------------
 
-;; Mood-line for better modeline
+
+
+
+;;Mood-line for better modeline
 (use-package  mood-line
   :config (mood-line-mode)
   :custom (mood-line-glyph-alist mood-line-glyphs-fira-code))
 
+
+
+
 ;; Set default font
-(set-face-attribute 'default nil :font "JetBrainsMono" :height 130)
+(set-face-attribute 'default nil :font "JetBrainsMono" :height 110)
+
+
+
+
 
 ;; Start Emacs in fullscreen mode
-;; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+;;(add-to-list 'default-frame-alist '(fullscreen . maximized))
 
 ;;===============================================================
-;; Keybinding and Shortcut Configurations
+;;; Keybinding and Shortcut Configurations
+
+(defalias 'list-buffers 'ibuffer-other-window) ;; ibuffer default C-x C-b
+
+
+
 
 ;; Use 'hydra' for easier keybinding
 (use-package hydra)
+
+
+
+
 
 ;; Custom function to select a line
 (defun select-line ()
@@ -120,6 +218,10 @@
       (end-of-line)
       (set-mark (line-beginning-position)))))
 
+
+
+
+
 ;;To move text up and down
 (use-package move-text
   :config
@@ -127,7 +229,11 @@
     (global-set-key (kbd "C-<up>") 'move-text-up)
     (global-set-key (kbd "C-<down>") 'move-text-down)))
 
-;; Ivy
+
+
+
+
+
 ;; Unbind and rebind keys
 (global-unset-key (kbd "C-q"))                                        ;; Unbind C-q
 (global-set-key (kbd "C-q C-r") 'restart-emacs)                       ;; Restart emacs
@@ -142,33 +248,42 @@
 (global-set-key (kbd "M-n n") 'centaur-tabs--create-new-empty-buffer) ;; Create new empty buffer
 (global-set-key (kbd "C-x K") 'kill-this-buffer) ;; Create new empty buffer
 
+
 (fset 'yes-or-no-p 'y-or-n-p)                                         ;; Simplify prompts to y/n
 (global-unset-key (kbd "C-\\"))
 
 
+
+
+
 ;;===============================================================
-;; Error Checking and Auto-complete
+;;; Error Checking and Auto-complete
 
 ;; Flycheck for syntax checking
 (use-package flycheck
   :init  (global-flycheck-mode)
-  :custom
-  (setq flycheck-standard-error-navigation t
-	flycheck-idle-change-delay 5.0
-	flycheck-display-errors-delay 0.9
-	flycheck-highlighting-mode 'symbols
-	flycheck-indication-mode 'left-fringe
-	flycheck-standard-error-navigation t
-	flycheck-deferred-syntax-check nil))
+  :config
+  (setq flycheck-idle-change-delay 0.5
+        flycheck-display-errors-delay nil
+        flycheck-highlighting-mode 'symbol
+        flycheck-indication-mode 'left-fringe
+        flycheck-standard-error-navigation t
+        flycheck-deferred-syntax-check nil))
 
-(use-package flycheck-inline
-  :hook
-  (flycheck-mode . flycheck-inline-mode))
+        ;; flycheck-python-flake8-executable "~/.local/bin/flake8"
+        ;; flycheck-python-pylint-executable "~/.local/bin/pylint"))
+
+
+;;flycheck porem em inline feio
+;; (use-package flycheck-inline
+;;   :hook
+;;   (flycheck-mode . flycheck-inline-mode))
+
+
+
 
 ;; Company-mode for autocompletion
 (use-package company
-  :diminish
-  :defer 2
   :custom
   (company-begin-commands '(self-insert-command))
   (company-idle-delay .1)
@@ -177,23 +292,144 @@
   (company-tooltip-align-annotations t)
   (global-company-mode 1))
 
+
+
+
+
+
 (use-package yasnippet
   :config (yas-global-mode))                     ;; Enable yasnippet for snippets
 
-;;Insert automatically parens pair
 
+
+
+
+
+;;Insert automatically parens pair
 (electric-pair-mode t)
 
+
+
+
+
+;;Use spaces instead of tabs
 (setq-default indent-tabs-mode nil)
 
+
+
+
+
 ;;===============================================================
-;; Development Tools
+;;; Development Tools
+
+
+;;When file changes, it autoupdate 
+(global-auto-revert-mode 1)
+
+
+
+
 
 ;; LSP for multiple languanges
 (use-package lsp-mode
   :hook (lsp-mode . lsp-enable-which-key-integration)
-  :config (setq lsp-completion-enable-additional-text-edit t)
-  (setq lsp-ui-sideline-show-hover))
+(add-to-list 'auto-mode-alist '("\\.xml\\'" . nxml-mode)))
+
+
+
+
+;;UI enhancements for LSP
+(use-package lsp-ui
+  :custom
+  (lsp-ui-sideline-enable nil)
+  :hook ((lsp-mode . lsp-ui-mode)))
+
+
+
+
+
+
+
+
+;;ivy with lsp
+(use-package lsp-ivy)
+
+
+
+
+
+
+
+
+;;Algumas funcoes do LSP usa helm
+
+(use-package helm-lsp)
+(use-package helm
+  :config (helm-mode))
+
+
+
+
+
+;;Debug for multiple languanges
+(use-package dap-mode
+  :after lsp-mode
+  :config (dap-auto-configure-mode))
+
+
+
+
+
+
+
+;; Terminal
+(use-package vterm)
+
+
+
+
+(add-hook 'vterm-mode-hook
+          (lambda ()
+            (setq buffer-face-mode-face '(:height 90))
+            (buffer-face-mode)))
+
+
+
+(use-package vterm-toggle
+  :bind ("C-c t" . 'vterm-toggle)
+  :config
+  (setq vterm-toggle-fullscreen-p nil)
+  (setq vterm-toggle-scope 'project)
+  (add-to-list 'display-buffer-alist
+               '((lambda (buffer-or-name _)
+                   (let ((buffer (get-buffer buffer-or-name)))
+                     (with-current-buffer buffer
+                       (or (equal major-mode 'vterm-mode)
+                           (string-prefix-p vterm-buffer-name (buffer-name buffer))))))
+                 (display-buffer-reuse-window display-buffer-at-bottom)
+                 (reusable-frames . visible)
+                 (window-height . 0.2))))
+
+
+
+
+;;C-Plus-Plus c++
+(which-key-mode)
+(add-hook 'c-mode-hook 'lsp)
+(add-hook 'c++-mode-hook 'lsp)
+
+
+;;C-Plus-Plus c++
+(add-hook 'c++-mode-hook
+          (lambda ()
+            (defun c-cp ()
+              "Insere template básico de C++."
+              (interactive)
+               (insert "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n ios::sync_with_stdio(0); \n cin.tie(0); \n // solution comes here \n}"))
+              (local-set-key (kbd "C-c C-p") 'c-cp)))
+
+
+
 
 ;;===============================================================
 ;; special section for OCAML
@@ -216,59 +452,87 @@
 (use-package flycheck-ocaml
   :config
   (flycheck-ocaml-setup))
+;;===============================================================
 
-;;=============================================================== 
 
+
+
+;;PHP
 (use-package php-mode)
 
 
-;; ?? 
+
+
+
+;; ??
 (use-package cider)
 
-;;ELixirn
+
+
+
+
+;;Elixir
 (use-package elixir-mode)
+
+
+
+
 
 ;;coq
 (use-package company-coq
   :hook
   (coq-mode-hook . company-coq-mode))
 
+
+
+
+
 ;; SLY for Common Lisp
 (use-package sly)
+
+
+
+
 
 ;; LSP for Java
 (use-package lsp-java
   :config (add-hook 'java-mode-hook 'lsp)
-  :bind ("C-c o" . lsp-organize-imports))
+  :bind ("C-c o" . lsp-organize-imports)
+  ("C-c c" . lsp-execute-code-action))
 
 
-(use-package dap-mode
-  :after lsp-mode
-  :config (dap-auto-configure-mode))
-
-;;copiei do github 
-;; (use-package helm-lsp)
-;; (use-package helm
-;;   :config (helm-mode))
- 
-
-(use-package quickrun)
-
-;; Lsp tree
-(use-package lsp-treemacs)
 
 
 
 
 ;; LSP for Python
+
+
 (use-package lsp-pyright
+  :ensure t
+  :custom (lsp-pyright-langserver-command "pyright") ;; or basedpyright
   :hook (python-mode . (lambda ()
                           (require 'lsp-pyright)
                           (lsp))))  ; or lsp-deferred
 
-;; Pyvenv
-(use-package pyvenv
-  :after lsp-pyright) 
+
+
+
+;; (use-package lsp-pyright
+;;   :custom (lsp-pyright-langserver-command "basedpyright")
+;;   :config
+;;   (setq   lsp-keep-workspace-alive nil
+;;           lsp-copilot-applicable-fn (lambda (&rest _) nil))
+;;   :hook
+;;   (((python-ts-mode) . (lambda ()
+;;                                       (require 'lsp-pyright)
+;;                                       (lsp-deferred)))
+;;    (flycheck-mode . (lambda ()
+;;                       (when (derived-mode-p 'python-mode 'python-ts-mode)
+;;                         (flycheck-add-next-checker 'lsp '(warning . python-flake8))
+;;                         (flycheck-add-next-checker 'python-flake8 '(warning . python-pylint))
+;;                         (message "Added flycheck checkers."))))))
+
 
 
 ;; TypeScript support with LSP
@@ -277,22 +541,30 @@
   :hook (typescript-mode . lsp-deferred)
   :config (setq typescript-indent-level 2))
 
-;;UI enhancements for LSP
-(use-package lsp-ui
-  :hook ((lsp-mode . lsp-ui-mode))
-  :config
-  (setq lsp-ui-sideline-update-mode 'line))
 
-  (setq lsp-ui-doc-enable t)
-  (setq lsp-ui-doc-position 'at-point) ;; top, bottom, at-point
-  (setq lsp-ui-doc-delay 0.4)
-  (setq lsp-ui-doc-show-with-cursor t)
-  (setq lsp-ui-doc-show-with-mouse t)
 
-(use-package lsp-ivy)
+
+(load-file (let ((coding-system-for-read 'utf-8))
+                (shell-command-to-string "agda --emacs-mode locate")))
+
+
+
+
 
 ;;===============================================================
-;; Additional Tools
+;;; Additional Tools
+
+
+
+
+;;For window-resize
+(use-package windresize
+  :bind ("C-c w" . windresize))
+
+
+
+
+
 
 ;; Keybinding helper
 (use-package which-key
@@ -300,28 +572,14 @@
   :diminish which-key-mode
   :config (setq which-key-idle-delay 0.3))
 
-;; ;; Terminal
-(use-package vterm)
-(use-package vterm-toggle
-  :bind ("C-c t" . 'vterm-toggle)
-  :config
-  (setq vterm-toggle-fullscreen-p nil)
-  (add-to-list 'display-buffer-alist
-               '((lambda (buffer-or-name _)
-                   (let ((buffer (get-buffer buffer-or-name)))
-                     (with-current-buffer buffer
-                       (or (equal major-mode 'vterm-mode)
-                           (string-prefix-p vterm-buffer-name (buffer-name buffer))))))
-                 (display-buffer-reuse-window display-buffer-at-bottom)
-                 ;;(display-buffer-reuse-window display-buffer-in-direction)
-                 ;;display-buffer-in-direction/direction/dedicated is added in emacs27
-                 ;;(direction . bottom)
-                 ;;(dedicated . t) ;dedicated is supported in emacs27
-                 (reusable-frames . visible)
-                 (window-height . 0.3))))
 
 ;; Magit for GIT
 (use-package magit)
+
+
+
+
+
 
 ;; Multiple cursor
 (use-package multiple-cursors
@@ -337,6 +595,11 @@
 ;; To read PDF
 (use-package pdf-tools)
 
+
+
+
+
+
 ;; To open apps in emacs
 ;; (use-package app-launcher
 ;;   :straight '(app-launcher :host github :repo "SebastienWae/app-launcher"))
@@ -346,22 +609,63 @@
   :hook (prog-mode . rainbow-delimiters-mode))
 (advice-add 'rainbow-turn-on :after  #'solo-jazz-theme-rainbow-turn-on)
 
+
+
+
+
+
 ;; Project management
 (use-package projectile
   :config
   (global-set-key (kbd "C-c p") 'projectile-command-map)
   (projectile-mode +1)
-  (setq projectile-project-search-path '("~/diversao/" "~/")))
+  (setq projectile-project-search-path '("~/fun/")
+        projectile-switch-project-action 'neotree-projectile-action
+	projectile-indexing-method 'alien
+	projectile-use-git-grep 1)
+  (setq projectile-completion-system 'ivy)
+
+  (projectile-discover-projects-in-search-path))
 
 
-(setq projectile-completion-system 'ivy)
-;; File tree view
+
+
+
+;;Dashboard configuration
+(use-package dashboard
+  :config
+  (setq dashboard-items '((recents . 3)
+                          (projects . 5)))
+  (setq dashboard-projects-backend 'projectile)
+  (setq dashboard-center-content t
+        dashboard-set-heading-icons t
+        dashboard-icon-type 'all-the-icons)
+  (setq dashboard-set-heading-icons t)
+  (setq dashboard-set-file-icons t)
+  (dashboard-setup-startup-hook ))
+
+
+
+
+(setq dashboard-startup-banner "~/.emacs.d/pictures/")
+
+
+
+
+
+;;FILE TREE VIEW
 (use-package neotree
   :bind (("C-\\" . neotree-toggle))
   :config
   (setq neo-theme 'icons
         neo-autorefresh t
-        neo-show-hidden-files t))
+        neo-smart-open t
+        neo-show-hidden-files t
+        neo-smart-open t
+        neo-window-fixed-size nil))
+
+
+
 ;; Enhanced help UI
 (use-package helpful
   :custom
@@ -374,8 +678,12 @@
    ("C-h x" . helpful-command)
    ("C-c d" . helpful-at-point)))
 
-;; Ivy for better minibuffer completion
-;; Ivy configuration
+
+
+
+
+;;Ivy for better minibuffer completion
+;;Ivy configuration
 (use-package ivy
   :diminish
   :init
@@ -389,6 +697,13 @@
    ("<f6>" . ivy-resume)  ;; Alternate key for resume
    ("C-x C-b" . counsel-switch-buffer)  ;; Switch buffers using counsel
    ("C-r" . counsel-minibuffer-history)))  ;; History search in minibuffer
+
+
+
+(use-package ivy-hydra
+  :after ivy)
+
+
 
 ;; Counsel configuration
 (use-package counsel
@@ -410,27 +725,43 @@
    ("C-x C-r" . counsel-recentf)))  ;; Find recents files
 
 
-;; Enhance M-x with Counsel
-(use-package smex)
 
 ;; Pretty Ivy with icons
 (use-package all-the-icons-ivy-rich
-  :init (all-the-icoNs-ivy-rich-mode 1))
+  :init (all-the-icons-ivy-rich-mode 1))
+
+
 
 (use-package ivy-rich
   :after ivy
   :init (ivy-rich-mode 1))
 
-;; Icons in dired-mode 
+
+
+;;better M-x
+(use-package amx)
+
+
+
+
+
+;; Icons in dired-mode
 (use-package nerd-icons-dired
   :hook (dired-mode . (lambda () (nerd-icons-dired-mode t))))
+
+
 
 ;; Use this to preview in dired
 (use-package peep-dired
   :after dired
   :config (setq peep-dired-cleanup-on-disable t))
 
-;; Tabs in emacs 
+
+
+
+
+
+;; Tabs in emacs
 (use-package centaur-tabs
   :config
   (setq centaur-tabs-style "bar"
@@ -449,43 +780,71 @@
   (dashboard-mode . centaur-tabs-local-mode)
   (vterm-mode . centaur-tabs-local-mode))
 
+
+
+
+
+
+;;better markdown
+(use-package markdown-mode
+  :hook (markdown-mode . lsp)
+  :bind (:map markdown-mode-map
+         ("C-c C-e" . markdown-do))
+  :config
+  (require 'lsp-marksman)
+  (setq markdown-fontify-code-blocks-natively t))
+
+(custom-set-faces
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.8 :foreground "#A3BE8C" :weight extra-bold))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.4 :foreground "#EBCB8B" :weight extra-bold))))
+ '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 1.2 :foreground "#D08770" :weight extra-bold))))
+ '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 1.15 :foreground "#BF616A" :weight extra-bold))))
+ '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 1.11 :foreground "#b48ead" :weight extra-bold))))
+ '(markdown-header-face-6 ((t (:inherit markdown-header-face :height 1.06 :foreground "#5e81ac" :weight extra-bold)))))
+
+
+
+
+
+
+
 ;;===============================================================
-;; ;; Org Mode and Enhancements
-;; (use-package org)
+;;Org Mode and Enhancements
+(use-package org)
 
-;; ;; Pretty org mode with org-superstar
-;; (use-package org-superstar
-;;   :hook (org-mode . org-superstar-mode)
-;;   :config
-;;   (setq org-superstar-special-todo-items t))
+;; Pretty org mode with org-superstar
+(use-package org-superstar
+  :hook (org-mode . org-superstar-mode)
+  :config
+  (setq org-superstar-special-todo-items t))
 
-;; ;; Custom org emphasis styles
-;; (setq org-emphasis-alist
-;;       '(("*" (bold :slant italic :weight black))
-;;         ("/" (italic :foreground "dark salmon"))
-;;         ("_" underline :foreground "cyan")
-;;         ("=" (:background "snow1" :foreground "deep slate blue"))
-;;         ("~" (:background "PaleGreen1" :foreground "dim gray"))
-;;         ("+" (:strike-through nil :foreground "dark orange"))))
-;; (setq org-hide-emphasis-markers t)
+;; Custom org emphasis styles
+(setq org-emphasis-alist
+      '(("*" (bold :slant italic :weight black))
+        ("/" (italic :foreground "dark salmon"))
+        ("_" (underline :foreground "cyan")
+        ("~" (:foreground "dim gray"))
+        ("=" (:background "snow1" :foreground "deep slate blue"))
+        ("+" (:strike-through nil :foreground "dark orange")))))
+(setq org-hide-emphasis-markers t)
 
-;; ;; TOC support in org-mode
-;; (use-package toc-org)
+;; TOC support in org-mode
+(use-package toc-org)
 
-;; ;;ORG-ROAM unicorn 
-;; (use-package org-roam
-;;   :custom
-;;   (org-roam-directory (file-truename "~/RoamNotes"))
-;;   :bind (("C-c n l" . org-roam-buffer-toggle)
-;;          ("C-c n f" . org-roam-node-find)
-;;          ("C-c n g" . org-roam-graph)
-;;          ("C-c n i" . org-roam-node-insert)
-;;          ("C-c n c" . org-roam-capture)
-;;          ;; Dailies
-;;          ("C-c n j" . org-roam-dailies-capture-today))
-;;   :config
-;;   ;; If you're using a vertical completion framework, you might want a more informative completion interface
-;;   (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
-;;   (org-roam-db-autosync-mode)
-;;   ;; If using org-roam-protocol
-;;   (require 'org-roam-protocol))
+;;ORG-ROAM unicorn
+(use-package org-roam
+  :custom
+  (org-roam-directory (file-truename "~/RoamNotes"))
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+         ("C-c n f" . org-roam-node-find)
+         ("C-c n g" . org-roam-graph)
+         ("C-c n i" . org-roam-node-insert)
+         ("C-c n c" . org-roam-capture)
+         ;; Dailies
+         ("C-c n j" . org-roam-dailies-capture-today))
+  :config
+  ;; If you're using a vertical completion framework, you might want a more informative completion interface
+  (setq org-roam-node-display-template (concat "${title:*} " (propertize "${tags:10}" 'face 'org-tag)))
+  (org-roam-db-autosync-mode)
+  ;; If using org-roam-protocol
+  (require 'org-roam-protocol))
